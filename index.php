@@ -54,7 +54,7 @@ require 'src/templates.php';
 
     <!-- YOUR HTML CODE GOES HERE -->
 	<head>
-    <title>W18_HP_Sneackers</title>
+    <title>Maje - landing page</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
