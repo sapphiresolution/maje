@@ -1,9 +1,7 @@
-{
-    "version": "1.0.0",
-    "name": "majo",
-    "private": "false",
-    "dependencies": {
-        "jquery": "^3.2.1"
-    },
-    "devdependencies": { "jquery": "^3.2.1" }
+﻿{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {
+  }
 }
