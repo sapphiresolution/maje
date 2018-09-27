@@ -1,0 +1,46 @@
+##{$ID} {
+  #ka-navbar-sticky-sticky-wrapper {
+    float: right;
+  }
+
+  #ka-navbar-sticky {
+    right: 30px;
+    z-index: 100;
+    width: 300px!important;
+
+    @media (min-width: 1200px) { right: 40px; }
+    @media (min-width: 1400px) { right: 100px; }
+
+    a {
+      font-size: 24px;
+      position: relative;
+      text-decoration: none;
+
+      &:after { content: "\25A1"; }
+      &:active { color: #97825F; }
+
+      &.hover,
+      &:active,
+      {
+        span { display: inline-block; }
+      }
+
+      &.hover,
+      &.active,
+      {
+        &:after { content: "\25A0"; }
+      }
+
+      span {
+        display: none;
+        font-size: 12px;
+        position: absolute;
+        letter-spacing: 3px;
+        white-space: nowrap;
+        transform-origin: 0 0;
+        text-transform: uppercase;
+        transform: translateX(-40px) translateY(15px) rotateZ(-90deg);
+      }
+    }
+  }
+}

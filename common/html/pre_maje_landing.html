@@ -1,0 +1,958 @@
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html prefix="og: http://ogp.me/ns#" lang="en"> <!--<![endif]-->
+<head>
+<meta charset=UTF-8>
+<title>__ID__</title>
+<link href="/on/demandware.static/Sites-Maje-FR-Site/-/default/dw2d405591/images/favicon.ico" rel="shortcut icon" />
+<meta name="description" content="La Vie en Maje avec Maje Paris" />
+<meta name="keywords" content=" " />
+<link href="/on/demandware.static/Sites-Maje-FR-Site/-/fr/v1529946268579/lib/jquery/ui/jquery.ui.all.css" type="text/css" rel="stylesheet" />
+
+<script src="/on/demandware.static/Sites-Maje-FR-Site/-/fr/v1529946268579/lib/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script>var app={};</script>
+<!--[if lt IE 9]>
+<script src="/on/demandware.static/Sites-Maje-FR-Site/-/fr/v1529946268579/js/lib/html5.js"></script>
+<![endif]-->
+<script type="text/javascript">//<!--
+/* <![CDATA[ (head-active_data.js) */
+var dw = (window.dw || {});
+dw.ac = {
+    _analytics: null,
+    _events: [],
+    _category: "",
+    _capture: function(configs) {
+        if (Object.prototype.toString.call(configs) === "[object Array]") {
+            configs.forEach(captureObject);
+            return;
+        }
+        dw.ac._events.push(configs);
+    },
+    capture: function() { dw.ac._capture(arguments); },
+    EV_PRD_SEARCHHIT: "searchhit",
+    EV_PRD_DETAIL: "detail",
+    EV_PRD_RECOMMENDATION: "recommendation",
+    EV_PRD_SETPRODUCT: "setproduct",
+    applyContext: function(context) {
+        if (typeof context === "object" && context.hasOwnProperty("category")) {
+          dw.ac._category = context.category;
+        }
+    },
+    setDWAnalytics: function(analytics) {
+        dw.ac._analytics = analytics;
+    }
+};
+/* ]]> */
+// -->
+</script><script type="text/javascript">//<!--
+/* <![CDATA[ (head-cquotient.js) */
+var CQuotient = window.CQuotient = {};
+CQuotient.clientId = 'aaon-Maje-FR';
+CQuotient.activities = [];
+CQuotient.cqcid='';
+CQuotient.cquid='';
+CQuotient.initFromCookies = function () {
+  var ca = document.cookie.split(';');
+  for(var i=0;i < ca.length;i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+    if (c.indexOf('cqcid=') == 0) {
+      CQuotient.cqcid=c.substring('cqcid='.length,c.length);
+    } else if (c.indexOf('cquid=') == 0) {
+      CQuotient.cquid=c.substring('cquid='.length,c.length);
+      break;
+    }
+  }
+}
+CQuotient.getCQCookieId = function () {
+  if(window.CQuotient.cqcid == '')
+    window.CQuotient.initFromCookies();
+  return window.CQuotient.cqcid;
+};
+CQuotient.getCQUserId = function () {
+  if(window.CQuotient.cquid == '')
+    window.CQuotient.initFromCookies();
+  return window.CQuotient.cquid;
+};
+/* ]]> */
+// -->
+</script>
+<link rel="stylesheet" media="print" href="/on/demandware.static/Sites-Maje-FR-Site/-/fr/v1529946268579/optimized/print.css" />
+<link rel="stylesheet" href="/on/demandware.static/Sites-Maje-FR-Site/-/fr/v1529946268579/optimized/maje.css" />
+<link rel="stylesheet" href="/on/demandware.static/Sites-Maje-FR-Site/-/fr/v1529946268579/css/country_specific.css" />
+<meta name="google-site-verification" content="KZTf1pcHOSmroRpgR3qgsxsAuNhYqJZje3jkZFoBQ_8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no" />
+<script>
+$(document).ready(function(){
+  Maje.home.bindMove();
+  Maje.home.resize ();
+});
+</script>
+
+<meta property="fb:app_id" content="948411401943483" />
+<meta property="og:url" content="https://fr.maje.com/fr_FR/la-vie-en-maje/Lavieenmaje.html" />
+<meta property="og:site_name" content="Maje-FR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="# La vie en Maje | Maje.com" />
+<meta property="og:image" content="" />
+<meta property="og:image:url" content="" />
+<meta property="og:description" content="Vous etes sur la description par d&eacute;faut pour le protocole Open Graph du site Maje FR (&agrave; contribuer dans Merchant Tools &gt;  Site Preferences &gt;  Custom Site Preferences &gt; SEO &gt; default description SEO Open Graph : pour chaque site et chaque langue)" />
+</head>
+<body>
+<script>
+    //ageRange calculation
+    // "a:[<19]","b:[20-29]","c:[30-39]","d:[40-49]","e:[50-59]","f:[60-69]","g:[>70]"
+
+    var today = new Date() //Date
+    var custBirthdayStrng = new Date("null") //Date converted into String
+    var durationAge = today - custBirthdayStrng;
+    var nbyear = durationAge/(1000*60*60*24*365);
+    var custmrAgeTag = function(){
+        if(nbyear && nbyear !== null){
+          if(nbyear < 19){
+            return 'a:'+nbyear;
+          }
+          if(nbyear >= 20 && nbyear <= 29){
+            return 'b:'+nbyear;
+          }
+          if(nbyear >= 30 && nbyear <= 39){
+            return 'c:'+nbyear;
+          }
+          if(nbyear >= 40 && nbyear <= 49){
+            return 'd:'+nbyear;
+          }
+          if(nbyear >= 50 && nbyear <= 59){
+            return 'e:'+nbyear;
+          }
+          if(nbyear >= 60 && nbyear <= 69){
+            return 'f:'+nbyear;
+          }
+          if(nbyear >= 70){
+            return 'g:'+nbyear;
+          }
+        }
+        else{
+          return 'undefined';
+        }
+    }
+
+    //customerLifeTimeValue calculation
+    // "a:0","b:[1-99]","c:[100-499]","d:[500-999]","e:[1000-2999]","f:[3000-4999]","g:[>5000]","undefined" // si problème avec la valeur dans BO
+
+    var custmrLfTimeVal = null;
+    var custmrLfTimeValTag = function(){
+        if(custmrLfTimeVal && custmrLfTimeVal !== null){
+          if(custmrLfTimeVal == 0){
+            return 'a:'+custmrLfTimeVal;
+          }
+          if(custmrLfTimeVal >= 1 && custmrLfTimeVal <= 99){
+            return 'b:'+custmrLfTimeVal;
+          }
+          if(custmrLfTimeVal >= 100 && custmrLfTimeVal <= 499){
+            return 'c:'+custmrLfTimeVal;
+          }
+          if(custmrLfTimeVal >= 500 && custmrLfTimeVal <= 999){
+            return 'd:'+custmrLfTimeVal;
+          }
+          if(custmrLfTimeVal >= 1000 && custmrLfTimeVal <= 2999){
+            return 'e:'+custmrLfTimeVal;
+          }
+          if(custmrLfTimeVal >= 3000 && custmrLfTimeVal <= 4999){
+            return 'f:'+custmrLfTimeVal;
+          }
+          if(custmrLfTimeVal >= 5000){
+            return 'g:'+custmrLfTimeVal;
+          }
+        }
+        else{
+          return 'undefined';
+        }
+    }
+
+    //customerLastOrderOldness calculation
+    // "a:0 jour","b:[1-7 jours]","c:[2-4 semaines]","d:[2-5 mois]","e:[6-12 mois]","f:[>1 an]","undefined" // si problème avec la valeur dans BO
+
+    var lastOrderDateStrng = "";
+
+
+
+    var durationOrder = today - lastOrderDateStrng;
+    var nbday = durationOrder/(1000*60*60*24);
+    var custmrLastOrderDateTag = function(){
+        if(nbday && nbday !== null){
+          if(nbday == 0){
+            return 'a:'+nbday;
+          }
+          if(nbday >= 1 && nbday <= 7){
+            return 'b:'+nbday;
+          }
+          if(nbday >= 8 && nbday <= 28){
+            return 'c:'+nbday;
+          }
+          if(nbday >= 29 && nbday <= 140){
+            return 'd:'+nbday;
+          }
+          if(nbday >= 141 && nbday <=365){
+            return 'e:'+nbday;
+          }
+          if(nbday > 365){
+            return 'f:'+nbday;
+          }
+        }
+        else{
+          return 'undefined';
+        }
+
+    }
+
+    // breadcrumbs
+    // ["aaa","bbb","ccc"], fil d'ariane
+
+    var breadcrumbsTag = function(){
+      var breadcrumb1, breadcrumb2, breadcrumb3, breadcrumb4 = '';
+      breadcrumb1 = 'Home'
+
+
+
+
+
+
+
+
+
+
+      return '[' +breadcrumb1+ ',' +breadcrumb2+ ',' +breadcrumb3+ ',' +breadcrumb4+ ']';
+    }
+
+    var converteoLayer = [{
+      /* On every page, leave all user info blank except "login state" if the user is not logged //*/
+      "user": {
+       "profile" : {
+        "profileInfo" : {
+         "profileID" :  'Unlogged', //only if the user is logged
+         "name" : 'Unlogged',
+         "email" : 'Unlogged',
+         "gender" : 'unknown', //M or F or unknown
+         "loginState" : 'Unlogged', // "Logged" ou "Unlogged"
+         "type" : 'Prospect', //"Prospect" by default, "New customer" si 1 achat dans l'historique de commande, "Repeat customer" si au moins 2 achats dans son historique
+         "ageRange": 'Unlogged', // "a:[<19]","b:[20-29]","c:[30-39]","d:[40-49]","e:[50-59]","f:[60-69]","g:[>70]" // laisser les lettres en préfixe pour faciliter le tri dans Excel
+         "customerLifeTimeValue": custmrLfTimeValTag(custmrLfTimeVal), // "a:0","b:[1-99]","c:[100-499]","d:[500-999]","e:[1000-2999]","f:[3000-4999]","g:[>5000]","undefined" // si problème avec la valeur dans BO
+         "customerLastOrderOldness":'Unlogged', // "a:0 jour","b:[1-7 jours]","c:[2-4 semaines]","d:[2-5 mois]","e:[6-12 mois]","f:[>1 an]","undefined" // si problème avec la valeur dans BO
+         "customerLoyaltyCard":"" // nom de la derniere carte de fidélité du client
+        },
+       }
+      },
+      "page": {
+        "pageInfo": {
+          "pageName" : 'fr.maje.com/on/demandware.servlet/Sites-Maje-FR-Site/fr/Googletags-AllPages', // URI de la page
+          "breadcrumbs" : breadcrumbsTag, // ["aaa","bbb","ccc"], fil d'ariane
+          "pageType" : 'home' // home|category|product|searchresults|basket|checkout|purchase|wishlist|useraccount...
+        }
+      }
+    }];
+  </script>
+
+
+<div id="wrapper" class="pt_storefront">
+<div id="header" role="banner">
+<header>
+<div class="header-message-content">
+</div>
+<div class="topHeader">
+<div class="topHeaderCont clearfix">
+<div class="topHeaderCont-sticky">
+<div class="customerService">
+<a class="customer-service-link" href="https://fr.maje.com/on/demandware.store/Sites-Maje-FR-Site/fr/Page-IncludeTemplate?tid=content%2fcustomerservicepopup">
+Service client
+</a>
+</div>
+<ul class="userInfoHeader">
+<li class="loginUserMaje ">
+<a href="/fr/account/" class="btnLoginMob"></a>
+
+<ul class="menu-utility-user">
+<li>
+<a title="Me connecter" href="https://fr.maje.com/fr/login/" class="user-login" onclick="converteoLayer.push({'event':'pageview','pageview':'/home/login'});">
+mon compte
+</a>
+</li>
+</ul>
+</li>
+<li class="basketMenu maskOnHover">
+<div id="mini-cart">
+
+
+<div class="mini-cart-total">
+<a href="/fr/panier/" class="iconBasket empty-basket"></a>
+<span class="mini-cart-label hidden-mob">
+<span class="hidden-mob">panier</span>
+</span>
+</div>
+<div class="mini-cart-content hidden-mob">
+<div class="wrapper-cart-product">
+<span class="title">
+</span>
+<div class="mini-cart-empty">
+<p>Vous n'avez aucun produit dans votre panier</p>
+</div>
+</div>
+</div>
+</li>
+<li class="header-search">
+<form role="search" action="https://fr.maje.com/fr/search/" method="get" name="simpleSearchA">
+<fieldset>
+<legend class="visually-hidden">Search Catalog</legend>
+<label class="visually-hidden" for="qA">Recherche</label>
+<input type="text" id="qA" name="q" value="" />
+<span class="search-icon hidden-small"></span>
+<input type="submit" value="go" />
+</fieldset>
+</form>
+<span class="searchbar-icon icon-search"></span>
+<div class="mobile-searchBox">
+<form role="searchA" action="https://fr.maje.com/fr/search/" method="get" name="mobileSimpleSearchA">
+<fieldset>
+<input class="mobile-searchBar" type="text" id="q" name="q" value="" placeholder="Recherche" />
+<legend class="visually-hidden">Search Catalog</legend>
+<label class="visually-hidden" for="q">Recherche</label>
+</fieldset>
+</form>
+</div>
+<script type="text/Javascript">
+/*
+$(document).ready(function(){
+  var slidingMobileMenu = $('body .slideMenu').text();
+  if(slidingMobileMenu != 'undefined' && slidingMobileMenu != null && slidingMobileMenu == '' ){// if Mobile Menu does not exist then add the placeholder value
+    var slidingMobileMenuSearchField = $('body .slideMenu .header-search form[name="simpleSearch"] input[type="text"]');
+    var placeholderValue = 'Recherche';
+    if(slidingMobileMenuSearchField != 'undefined' && slidingMobileMenuSearchField != null && slidingMobileMenuSearchField !='' && $('body div.slideMenu').css('display') == 'block'){
+      $('body form[name="simpleSearch"] input[type="text"]').attr('placeholder', placeholderValue);
+    }
+  }
+});
+*/
+</script>
+</li>
+</ul>
+<div class="main-logo headLogo">
+<a class="btnMenuSlide">
+<span class="picto-menu-responsive">
+<span></span>
+<span></span>
+<span></span>
+</span>
+<span class="title-menu-tablet">menu</span>
+</a>
+<span class="primary-logo maje">
+<a href="https://fr.maje.com/fr/home/">
+<span class="icon-logo-maje-paris"></span>
+<span>
+MAJE
+</span>
+</a>
+</span>
+</div>
+<div class="main-menu slideMenu">
+<div class="menuMainMaje">
+<ul class="listMenu main-listMenu">
+<li class="listItem  pre_soldes  text-dotted pushBlocContent isNoColorHover" style="color:">
+<a href="/fr/journees-privees-1/">
+<span class="" style="color:#b6a68b">
+Journées Privées
+</span>
+</a>
+<style>
+
+</style>
+<div class="subMain">
+<div class="expan-bg-sub-menu" style="background-color: rgba(244,244,244,null);"></div>
+<div class="close-sub-menu"></div>
+<ul class="titleMain clearfix">
+<li class="listItem containercategories_presoldes  ">
+<span class="subMain-title" style="">
+Catégories
+</span>
+<ul class="subMenu-level2">
+<li class="column">
+<a href="https://fr.maje.com/fr/journees-privees/categories/voir-tout/" alt="Voir tout" title="Voir tout">
+<span style=";font-weight:bold;;">Voir tout</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/journees-privees/categories/robes/" alt="Robes" title="Robes">
+<span style=";;;">Robes</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/journees-privees/categories/jupes-et-shorts/" alt="Jupes &amp; Shorts" title="Jupes &amp; Shorts">
+<span style=";;;">Jupes & Shorts</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/journees-privees/categories/pulls-et-cardigans/" alt="Pulls &amp; Cardigans" title="Pulls &amp; Cardigans">
+<span style=";;;">Pulls & Cardigans</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/journees-privees/categories/tops/" alt="Tops" title="Tops">
+<span style=";;;">Tops</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/journees-privees/categories/t-shirts/" alt="T-shirts" title="T-shirts">
+<span style=";;;">T-shirts</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/journees-privees/categories/manteaux-et-vestes/" alt="Manteaux &amp; Vestes" title="Manteaux &amp; Vestes">
+<span style=";;;">Manteaux & Vestes</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/journees-privees/categories/blousons/" alt="Blousons" title="Blousons">
+<span style=";;;">Blousons</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/journees-privees/categories/pantalons-et-jeans/" alt="Pantalons &amp; Jeans" title="Pantalons &amp; Jeans">
+<span style=";;;">Pantalons & Jeans</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/journees-privees/categories/sacs/" alt="Sacs" title="Sacs">
+<span style=";;;">Sacs</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/journees-privees/categories/accessoires/" alt="Accessoires" title="Accessoires">
+<span style=";;;">Accessoires</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/journees-privees/categories/bijoux/" alt="Bijoux" title="Bijoux">
+<span style=";;;">Bijoux</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="listItem containercategories_remises  ">
+<span class="subMain-title" style="">
+Remises
+</span>
+<ul class="subMenu-level2">
+<li class="column">
+<a href="https://fr.maje.com/fr/journees-privees/remises/nouvelles-remises/" alt="Nouvelles remises" title="Nouvelles remises">
+<span style=";;;">Nouvelles remises</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/journees-privees/remises/best-sellers/" alt="Best sellers" title="Best sellers">
+<span style=";;;">Best sellers</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/journees-privees/remises/petits-prix/" alt="Petits Prix" title="Petits Prix">
+<span style=";;;">Petits Prix</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/journees-privees/remises/-50-/" alt="-50%" title="-50%">
+<span style=";;;">-50%</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/journees-privees/remises/-40-/" alt="-40%" title="-40%">
+<span style=";;;">-40%</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/journees-privees/remises/-30-/" alt="-30%" title="-30%">
+<span style=";;;">-30%</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/journees-privees/remises/-20-/" alt="-20%" title="-20%">
+<span style=";;;">-20%</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="pushContent">
+<p class="push-text-wrapper"><span class="push-text">Jusqu'à -50%</span></p>
+<a href="https://fr.maje.com/fr/login/">
+<img src="/on/demandware.static/-/Sites-Maje-FR-Library/default/dw0ca0319e/site/Home/E18/Push Menu/pm_JPS18_deco_FR.jpg">
+</a>
+</li>
+</ul>
+<div class="mainMenu-hover"></div>
+</div>
+</li>
+<li class="listItem  pret a porter   pushBlocContent isNoColorHover" style="color:">
+<a href="/fr/pret-a-porter/">
+<span class="" style="">
+Prêt-à-porter
+</span>
+</a>
+
+<style>
+
+</style>
+<div class="subMain">
+<div class="expan-bg-sub-menu" style="background-color: rgba(244,244,244,null);"></div>
+<div class="close-sub-menu"></div>
+<ul class="titleMain clearfix">
+<li class="listItem containercategories_pap  ">
+<span class="subMain-title" style="">
+Catégories
+</span>
+<ul class="subMenu-level2">
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/categories/nouvelle-collection/" alt="Nouvelle Collection" title="Nouvelle Collection">
+<span style=";font-weight:bold;;">Nouvelle Collection</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/categories/les-essentiels/" alt="Les Essentiels" title="Les Essentiels">
+<span style=";;;">Les Essentiels</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/categories/les-imprimes-1/" alt="Les imprim&eacute;s" title="Les imprim&eacute;s">
+<span style=";;;">Les imprimés</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/categories/les-cuirs/" alt="Les cuirs" title="Les cuirs">
+<span style=";;;">Les cuirs</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/categories/le-denim/" alt="Le denim" title="Le denim">
+<span style=";;;">Le denim</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/categories/party-time/" alt="Party time" title="Party time">
+<span style=";;;">Party time</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/categories/mi-saison/" alt="Mi Saison" title="Mi Saison">
+<span style=";;;">Mi Saison</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/categories/majexclusive-2/" alt="Majexclusive" title="Majexclusive">
+<span style=";;;">Majexclusive</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/categories/plein-ete/" alt="Plein &eacute;t&eacute;" title="Plein &eacute;t&eacute;">
+<span style=";;;">Plein été</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="listItem containercollection_pap  mobile-item-position1">
+<span class="subMain-title" style="">
+Collection
+</span>
+<ul class="subMenu-level2">
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/collection/tout-voir/" alt="Tout voir" title="Tout voir">
+<span style=";font-weight:bold;;">Tout voir</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/collection/robes/" alt="Robes" title="Robes">
+<span style=";;;">Robes</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/collection/jupes-et-shorts-2/" alt="Jupes &amp; Shorts" title="Jupes &amp; Shorts">
+<span style=";;;">Jupes & Shorts</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/collection/tops/" alt="Tops" title="Tops">
+<span style=";;;">Tops</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/collection/chemises/" alt="Chemises" title="Chemises">
+<span style=";;;">Chemises</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/collection/t-shirts/" alt="T-Shirts" title="T-Shirts">
+<span style=";;;">T-Shirts</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/collection/maille/" alt="Maille" title="Maille">
+<span style=";;;">Maille</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/collection/manteaux/" alt="Manteaux" title="Manteaux">
+<span style=";;;">Manteaux</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/collection/blousons/" alt="Blousons" title="Blousons">
+<span style=";;;">Blousons</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/collection/vestes/" alt="Vestes" title="Vestes">
+<span style=";;;">Vestes</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/collection/pantalons/" alt="Pantalons" title="Pantalons">
+<span style=";;;">Pantalons</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/collection/jeans/" alt="Jeans" title="Jeans">
+<span style=";;;">Jeans</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/pret-a-porter/collection/combinaisons/" alt="Combinaisons" title="Combinaisons">
+<span style=";;;">Combinaisons</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="pushContent">
+<p class="push-text-wrapper"><span class="push-text">Plein été</span></p>
+<a href="/fr/pret-a-porter/categories/plein-ete/">
+<img src="/on/demandware.static/-/Sites-Maje-FR-Library/default/dwed019091/site/Home/E18/Push Menu/PM_PAP_PLEIN-ETE.jpg">
+</a>
+</li>
+</ul>
+<div class="mainMenu-hover"></div>
+</div>
+</li>
+<li class="listItem  sacs   pushBlocContent isNoColorHover" style="color:">
+<a href="/fr/sacs/">
+<span class="" style="">
+Sacs
+</span>
+</a>
+<style>
+
+</style>
+<div class="subMain">
+<div class="expan-bg-sub-menu" style="background-color: rgba(244,244,244,null);"></div>
+<div class="close-sub-menu"></div>
+<ul class="titleMain clearfix">
+<li class="listItem containercategories_sacs  ">
+<span class="subMain-title" style="">
+Catégories
+</span>
+<ul class="subMenu-level2">
+<li class="column">
+<a href="https://fr.maje.com/fr/sacs/categories/les-essentiels/" alt="Les Essentiels" title="Les Essentiels">
+<span style=";;;">Les Essentiels</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/sacs/categories/m-mini/" alt="M Mini" title="M Mini">
+<span style=";;;">M Mini</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/sacs/categories/m-walk/" alt="M Walk" title="M Walk">
+<span style=";;;">M Walk</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="listItem containercollection_sacs  ">
+<span class="subMain-title" style="">
+Collection
+</span>
+<ul class="subMenu-level2">
+<li class="column">
+<a href="https://fr.maje.com/fr/sacs/collection/tout-voir/" alt="Tout voir" title="Tout voir">
+<span style=";font-weight:bold;;">Tout voir</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/sacs/collection/sacs-m/" alt="Sacs M" title="Sacs M">
+<span style=";;;">Sacs M</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/sacs/collection/sacs-ldance/" alt="Sacs LDance" title="Sacs LDance">
+<span style=";;;">Sacs LDance</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/sacs/collection/sacs-star/" alt="Sacs Star" title="Sacs Star">
+<span style=";;;">Sacs Star</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/sacs/collection/bandoulieres/" alt="Bandouli&egrave;res" title="Bandouli&egrave;res">
+<span style=";;;">Bandoulières</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="pushContent">
+<a href="/fr/sacs/collection/tout-voir/">
+<img src="/on/demandware.static/-/Sites-Maje-FR-Library/default/dw10b5dea6/site/Home/E18/Push Menu/pm_access_bag1.jpg">
+</a>
+</li>
+</ul>
+<div class="mainMenu-hover"></div>
+</div>
+</li>
+<li class="listItem  accessoires   pushBlocContent isNoColorHover" style="color:">
+<a href="/fr/accessoires/">
+<span class="" style="">
+Accessoires
+</span>
+</a>
+<style>
+
+</style>
+<div class="subMain">
+<div class="expan-bg-sub-menu" style="background-color: rgba(244,244,244,null);"></div>
+<div class="close-sub-menu"></div>
+<ul class="titleMain clearfix">
+<li class="listItem containercategories_accessoires  ">
+<span class="subMain-title" style="">
+Catégories
+</span>
+<ul class="subMenu-level2">
+<li class="column">
+<a href="https://fr.maje.com/fr/accessoires/categories/les-essentiels/" alt="Les Essentiels" title="Les Essentiels">
+<span style=";;;">Les Essentiels</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/accessoires/categories/charm%E2%80%99s-alphabet/" alt="Charm&rsquo;s Alphabet" title="Charm&rsquo;s Alphabet">
+<span style=";;;">Charm’s Alphabet</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/h16bijoux/H16Bijoux.html" alt="Charm's Astro" title="Charm's Astro">
+<span style=";;;">Charm's Astro</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/charms_chiffres/Charms_Chiffres.html" alt="Charm&rsquo;s Chiffres" title="Charm&rsquo;s Chiffres">
+<span style=";;;">Charm’s Chiffres</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/maje_eyewear/Sunglasses.html" alt="Lunettes de soleil" title="Lunettes de soleil">
+<span style=";;;">Lunettes de soleil</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="listItem containercollection_accessoires  ">
+<span class="subMain-title" style="">
+Collection
+</span>
+<ul class="subMenu-level2">
+<li class="column">
+<a href="https://fr.maje.com/fr/accessoires/collection/tout-voir/" alt="Tout voir" title="Tout voir">
+<span style=";font-weight:bold;;">Tout voir</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/accessoires/collection/bijoux/" alt="Bijoux" title="Bijoux">
+<span style=";;;">Bijoux</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/accessoires/collection/chaussures/" alt="Chaussures" title="Chaussures">
+<span style=";;;">Chaussures</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/accessoires/collection/ceintures/" alt="Ceintures" title="Ceintures">
+<span style=";;;">Ceintures</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/accessoires/collection/chales-et-ponchos/" alt="Ch&acirc;les &amp; Ponchos" title="Ch&acirc;les &amp; Ponchos">
+<span style=";;;">Châles & Ponchos</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/accessoires/collection/maillots-de-bain/" alt="Maillots de bain" title="Maillots de bain">
+<span style=";;;">Maillots de bain</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/accessoires/collection/lunettes/" alt="Lunettes" title="Lunettes">
+<span style=";;;">Lunettes</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/accessoires/collection/gadgets/" alt="Gadgets" title="Gadgets">
+<span style=";;;">Gadgets</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="pushContent">
+<p class="push-text-wrapper"><span class="push-text">Accessoires<span class="text-uplicate">Gadgets</span></span></p>
+<a href="/fr/accessoires/collection/gadgets/">
+<img src="/on/demandware.static/-/Sites-Maje-FR-Library/default/dw9d5c62c9/site/Home/E18/Push Menu/PM_GADGETS-UK.jpg">
+</a>
+</li>
+</ul>
+<div class="mainMenu-hover"></div>
+</div>
+</li>
+<li class="listItem hide-on-sticky categorie-20ans    isNoColorHover" style="color:">
+<a href="javascript:void(0)">
+<span class="hasIcon" style="">
+<img src="/on/demandware.static/-/Sites-Maje-FR-Library/default/dwca2666a8/site/Home/E18/img-menu-coeur01.png" class="normal" />
+<img src="/on/demandware.static/-/Sites-Maje-FR-Library/default/dwc9685498/site/Home/E18/img-menu-coeur-rollover01.png" class="hover" />
+Dream Tomorrow
+</span>
+</a>
+<style>
+
+</style>
+<div class="subMain">
+<div class="expan-bg-sub-menu" style="background-color: rgba(244,244,244,null);"></div>
+<div class="close-sub-menu"></div>
+<ul class="titleMain clearfix">
+<li class="listItem containercategories_20ans  ">
+<span class="subMain-title" style="">
+La Maison
+</span>
+<ul class="subMenu-level2">
+<li class="column">
+<a href="https://fr.maje.com/fr/h15biojudith/H15Biojudith.html" alt="Judith Milgrom" title="Judith Milgrom">
+<span style=";;;">Judith Milgrom</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/happy-birthday/Happy-birthday.html" alt="Happy Birthday" title="Happy Birthday">
+<span style=";;;">Happy Birthday</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/lavieenmaje-2/" alt="#LaVieEnMaje" title="#LaVieEnMaje">
+<span style=";;;">#LaVieEnMaje</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="listItem container20ans_dreamtomorrow  ">
+<span class="subMain-title" style="">
+Dream Tomorrow
+</span>
+<ul class="subMenu-level2">
+<li class="column">
+<a href="https://fr.maje.com/fr/campagne/Campagne.html" alt="Campagne" title="Campagne">
+<span style=";;;">Campagne</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/lookbook/Lookbook.html" alt="Lookbook" title="Lookbook">
+<span style=";;;">Lookbook</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/gadgets/Gadgets.html" alt="Gadgets" title="Gadgets">
+<span style=";;;">Gadgets</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/collection/Collection.html" alt="Inspirations" title="Inspirations">
+<span style=";;;">Inspirations</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/party_time/Party_time.html" alt="Party time" title="Party time">
+<span style=";;;">Party time</span>
+</a>
+</li>
+<li class="column">
+<a href="https://fr.maje.com/fr/cuir/Cuir.html" alt="Cuir" title="Cuir">
+<span style=";;;">Cuir</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="pushContent">
+<p class="push-text-wrapper"><span class="push-text">Dream tomorrow</span></p>
+<a href="/fr/happy-birthday/Happy-birthday.html">
+<img src="/on/demandware.static/-/Sites-Maje-FR-Library/default/dw0f9adf9f/site/Home/E18/Push Menu/PM_DREAM.jpg">
+</a>
+</li>
+</ul>
+<div class="mainMenu-hover"></div>
+</div>
+</li>
+</ul>
+<ul class="listMenu mobile-util">
+<li class="listItem">
+<a href="https://fr.maje.com/fr/account/">
+Mon Compte
+</a>
+</li>
+<li class="listItem">
+<a href="https://fr.maje.com/fr/panier/">
+Panier
+</a>
+</li>
+<li class="listItem">
+<a href="https://fr.maje.com/fr/boutiques/">
+Boutiques
+</a>
+</li>
+<li class="listItem">
+<a class="customer-service-link" href="https://fr.maje.com/on/demandware.store/Sites-Maje-FR-Site/fr/Page-IncludeTemplate?tid=content%2fcustomerservicepopup">
+Service client
+</a>
+</li>
+</ul>
+</div>
+<script type="text/javascript">
+    var ism = $('[name="ism"]');
+
+    if(ism && ism.length){
+      ism.each((i,e)=>{
+        var nextLi = $(e).next("li");
+        var dataIsos = $(e).data("isos");
+
+        if(!dataIsos){
+          nextLi.addClass("hide-on-sticky");
+        }
+      });
+    }
+  </script>
+</div>
+</div>
+</div>
+<div class="mobile-searchBox">
+<form role="search{sufixFormSimpleSearch}" action="https://fr.maje.com/fr/search/" method="get" name="mobileSimpleSearch{sufixFormSimpleSearch}">
+<fieldset>
+<input class="mobile-searchBar" type="text" id="q" name="q" value="" placeholder="Recherche" />
+<legend class="visually-hidden">Search Catalog</legend>
+<label class="visually-hidden" for="q">Recherche</label>
+</fieldset>
+</form>
+</div>
+</div>
+</header>
+</div>
+<div id="main" role="main">
+<div class="html-slot-container">

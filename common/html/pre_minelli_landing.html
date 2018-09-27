@@ -1,0 +1,2036 @@
+
+
+
+
+
+
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/util/modules.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/util/modules.isml" -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/htmlhead.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/components/header/htmlhead.isml" -->
+
+
+<meta charset=UTF-8>
+
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script type="text/javascript">
+WebFontConfig = {
+google: { families: [ 'Playfair+Display:700:latin', 'Work+Sans:400,500,600,700:latin', 'Open Sans' ] }
+};
+(function() {
+var wf = document.createElement('script');
+wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+wf.type = 'text/javascript'
+wf.async = 'true';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(wf, s);
+})();
+</script>
+
+
+
+<title>__ID__</title>
+
+
+
+<link href="/on/demandware.static/Sites-MIN_FR-Site/-/default/dw8e159856/images/favicon.ico" rel="shortcut icon" />
+
+
+
+
+<meta name="description" content="  Salesforce Commerce Cloud SiteGenesis"/>
+<meta name="keywords" content="  Salesforce Commerce Cloud SiteGenesis"/>
+
+
+
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/htmlhead_UI.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/components/header/htmlhead_UI.isml" -->
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="/on/demandware.static/Sites-MIN_FR-Site/-/fr_FR/v1535643118194/js/lib/html5.js"></script>
+<![endif]-->
+
+<script type="text/javascript">//<!--
+/* <![CDATA[ (head-active_data.js) */
+var dw = (window.dw || {});
+dw.ac = {
+    _analytics: null,
+    _events: [],
+    _category: "",
+    _capture: function(configs) {
+        if (Object.prototype.toString.call(configs) === "[object Array]") {
+            configs.forEach(captureObject);
+            return;
+        }
+        dw.ac._events.push(configs);
+    },
+    capture: function() { dw.ac._capture(arguments); },
+    EV_PRD_SEARCHHIT: "searchhit",
+    EV_PRD_DETAIL: "detail",
+    EV_PRD_RECOMMENDATION: "recommendation",
+    EV_PRD_SETPRODUCT: "setproduct",
+    applyContext: function(context) {
+        if (typeof context === "object" && context.hasOwnProperty("category")) {
+          dw.ac._category = context.category;
+        }
+    },
+    setDWAnalytics: function(analytics) {
+        dw.ac._analytics = analytics;
+    }
+};
+/* ]]> */
+// -->
+</script>
+
+
+<!-- UI -->
+<link rel="stylesheet" href="/on/demandware.static/Sites-MIN_FR-Site/-/fr_FR/v1535643118194/css/style.css" />
+<!--[if lte IE 8]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js" type="text/javascript"></script>
+<script src="https://cdn.rawgit.com/chuckcarpenter/REM-unit-polyfill/master/js/rem.min.js" type="text/javascript"></script>
+<![endif]-->
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+if (window.jQuery) {
+jQuery(document).ready(function(){
+if(screen.width < 768){
+jQuery('#footer').append('<a href="/on/demandware.store/Sites-MIN_FR-Site/fr_FR/Home-Show" class="full-site-link">View Full Site</a>');
+jQuery('.full-site-link')
+.attr('href', '/on/demandware.store/Sites-MIN_FR-Site/fr_FR/Home-FullSite')
+.click(function(e) {
+e.preventDefault();
+jQuery.ajax({
+url: '/on/demandware.store/Sites-MIN_FR-Site/fr_FR/Home-FullSite',
+success: function(){
+window.location.reload();
+}
+});
+}
+);
+}
+});
+}
+</script>
+
+
+
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/abtasty.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/components/header/abtasty.isml" -->
+
+
+
+
+<script type="text/javascript" src=""></script>
+
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/styla/headerinclude.isml (int_styla)" dwTemplateURL="http://localhost:60606/target=/int_styla/cartridge/templates/default/styla/headerinclude.isml" -->
+
+
+
+
+
+
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/content/content/pt_content_UI.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/content/content/pt_content_UI.isml" -->
+
+
+
+
+<meta name="rqid" content="RRRRRRRRRRRRRRRR"/><link type="text/css" href="/on/demandware.static/Sites-Site/-/-/internal/css/dwux-sf-15.5.css?v=17.1" rel="stylesheet" /></head>
+<body><iframe src="/on/demandware.store/Sites-MIN_FR-Site/fr_FR/__SYSTEM__StorefrontToolkit-Start" width="0px" height="0px" id="DW-SFToolkit"></iframe>
+<span id="DW-SFToolkit-config" data-data="{&quot;baseURL&quot;:&quot;/on/demandware.static/Sites-Site/-/-/internal/&quot;,&quot;editURL&quot;:&quot;https://stg.minelli.fr/on/demandware.store/Sites-Site/-/&quot;,&quot;site&quot;:&quot;MIN_FR&quot;,&quot;cp&quot;:{&quot;serverDateTimePattern&quot;:&quot;yyyyMMddHHmm&quot;,&quot;datePattern&quot;:&quot;dd/MM/yyyy&quot;,&quot;timePattern&quot;:&quot;HH:mm&quot;}}" ></span>
+<script type="application/javascript" src="/on/demandware.static/Sites-Site/-/-/internal/jscript/dwux-init.js?v=16.7.3"></script><!-- dwMarker="dw-object-page" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_smc_core/cartridge/templates/default/content/content/contentpage.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Page.js&amp;start=Show&quot;,&quot;PageProcessingTime&quot;:270,&quot;PageCacheExpires&quot;:&quot;31/08/2018 19:27&quot;,&quot;TemplateTitle&quot;:&quot;/default/content/content/contentpage.isml (app_smc_core)&quot;,&quot;PipelineTitle&quot;:&quot;Page-Show (app_smc_controllers)&quot;}" --><!-- dwMarker="page" dwPipelineTitle="Page-Show (app_smc_controllers)" dwPipelineURL="http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Page.js&amp;start=Show" dwIsController="true" dwTemplateTitle="/default/content/content/contentpage.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/content/content/contentpage.isml" -->
+<div id="wrapper" class="pt_content">
+<!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/header.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/components/header/header.isml" -->
+
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/tagcontainers/header.isml (int_commanderact)" dwTemplateURL="http://localhost:60606/target=/int_commanderact/cartridge/templates/default/tagcontainers/header.isml" -->
+
+  <script type="text/javascript" src="//cdn.tagcommander.com/4270/uat/tc_MINELLIV2_9.js"></script>
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/datalayer/layer.isml (int_commanderact)" dwTemplateURL="http://localhost:60606/target=/int_commanderact/cartridge/templates/default/datalayer/layer.isml" -->
+
+  <script type="text/javascript">
+  var tc_vars = {"page_name":"/on/demandware.store/Sites-MIN_FR-Site/fr_FR/Page-Show","env_country":"FR","env_language":"fr","env_currency":"EUR","env_work":"staging","env_version":"desktop responsive","search_keywords":"","user_id":"","user_email":"","user_isNew":"0.00","user_newcustomer":"0.00","user_age":"0.00","user_logged":"not logged","search_results_number":"0.00","page_error":"200"};
+</script>
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/tagcontainers/analytics.isml (int_commanderact)" dwTemplateURL="http://localhost:60606/target=/int_commanderact/cartridge/templates/default/tagcontainers/analytics.isml" -->
+
+  <script type="text/javascript" src="//cdn.tagcommander.com/4270/uat/tc_MINELLIV2_1.js"></script>
+
+<header class="c-header " data-component="header">
+
+<!-- dwMarker="slot" dwContentID="header-banner" dwContext="global"-->
+
+
+
+  <div class="c-header__banner" data-ui="headerBanner">
+  <div class="l-site__container">
+    <div class="c-header__bannercontent">
+
+        <div class="menu-slot">
+          Livraison et retours offerts en boutique
+        </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="c-header__main" data-ui="headerMain" data-reference="headerOffset" role="banner">
+<div class="l-site__container">
+<div class="c-header__wrapper">
+
+<nav class="c-header__nav c-nav" role="navigation" data-component="nav">
+
+<input type="checkbox" class="c-nav__input" data-action="level-0" />
+<span class="c-nav__line"></span>
+<span class="c-nav__line"></span>
+<span class="c-nav__line"></span>
+
+
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/util/modules.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/util/modules.isml" -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_smc_core/cartridge/templates/default/components/header/headermenu.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Home.js&amp;start=IncludeHeaderMenu&quot;,&quot;PageProcessingTime&quot;:269,&quot;PageCacheExpires&quot;:&quot;31/08/2018 19:27&quot;,&quot;TemplateTitle&quot;:&quot;/default/components/header/headermenu.isml (app_smc_core)&quot;,&quot;PipelineTitle&quot;:&quot;Home-IncludeHeaderMenu (app_smc_controllers)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Home-IncludeHeaderMenu (app_smc_controllers)" dwPipelineURL="http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Home.js&start=IncludeHeaderMenu" dwIsController="true" dwTemplateTitle="/default/components/header/headermenu.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/components/header/headermenu.isml" --><ul class="c-nav__menu menu-category level-0" data-ui="menuContainer">
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level0 ">
+
+<a class=" c-nav__menulink" href="http://stg.minelli.fr/femme" data-action="level-1">
+<span>Femme</span>
+
+<i class="c-icon--arrow-bottom"></i>
+
+
+</a>
+<!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/categoryflyout.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/components/header/categoryflyout.isml" -->
+
+
+
+
+
+<div class="c-nav__submenu level-1" data-ui="subMenu">
+<div class="c-nav__submenuinner">
+<ul class="c-nav__menulist menu-vertical">
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level1 c-nav__menuitem--withsubmenu ">
+<a class="c-nav__menulink" href="http://stg.minelli.fr/femme-chaussures" data-action="level-2">
+Chaussures
+
+<i class="c-icon--arrow-bottom"></i>
+
+</a>
+
+<div class="c-nav__submenu level-2" data-ui="subMenu">
+<ul>
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/femme-chaussures-bottines-boots" class="c-nav__menulink">
+Bottines et boots
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/femme-chaussures-bottes" class="c-nav__menulink">
+Bottes
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/femme-chaussures-escarpins" class="c-nav__menulink">
+Escarpins
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/femme-chaussures-mocassins" class="c-nav__menulink">
+Mocassins
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/femme-chaussures-derbies-richelieux" class="c-nav__menulink">
+Derbies et richelieux
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/femme-chaussures-ballerines-slip-on" class="c-nav__menulink">
+Ballerines et slip-on
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/femme-chaussures-baskets" class="c-nav__menulink">
+Baskets
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/femme-chaussures-espadriles" class="c-nav__menulink">
+Espadrilles
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/femme-chaussures-sandales" class="c-nav__menulink">
+Sandales
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/femme-chaussures-compens%C3%A9es" class="c-nav__menulink">
+Compens&eacute;es
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 c-nav__menuitem--allProducts">
+<a href="http://stg.minelli.fr/femme-toutes-les-chaussures" class="c-nav__menulink">
+Toutes les chaussures
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/femme-chaussures-entretien" class="c-nav__menulink">
+Entretien
+</a>
+</li>
+
+
+</ul>
+</div>
+
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level1 c-nav__menuitem--withsubmenu ">
+<a class="c-nav__menulink" href="http://stg.minelli.fr/femme-maroquinerie" data-action="level-2">
+Maroquinerie
+
+<i class="c-icon--arrow-bottom"></i>
+
+</a>
+
+<div class="c-nav__submenu level-2" data-ui="subMenu">
+<ul>
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/femme-maroquinerie-petites-maros-et-pochettes" class="c-nav__menulink">
+Petites maroquineries et pochettes
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/femme-maroquinerie-sacs-grand-format" class="c-nav__menulink">
+Sacs grand format
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/femme-maroquinerie-sacs-petit-format" class="c-nav__menulink">
+Sacs petit format
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 c-nav__menuitem--allProducts">
+<a href="http://stg.minelli.fr/femme-maroquinerie-toute-la-maroquinerie" class="c-nav__menulink">
+Toute la maroquinerie
+</a>
+</li>
+
+
+</ul>
+</div>
+
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level1 c-nav__menuitem--withsubmenu ">
+<a class="c-nav__menulink" href="http://stg.minelli.fr/femme-accessoires" data-action="level-2">
+Accessoires
+
+<i class="c-icon--arrow-bottom"></i>
+
+</a>
+
+<div class="c-nav__submenu level-2" data-ui="subMenu">
+<ul>
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/femme-accessoires-foulards-et-echarpes" class="c-nav__menulink">
+Foulards et &eacute;charpes
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/femme-accessoires-chaussettes" class="c-nav__menulink">
+Chaussettes
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 c-nav__menuitem--allProducts">
+<a href="http://stg.minelli.fr/femme-accessoires-tous-les-accessoires" class="c-nav__menulink">
+Tous les accessoires
+</a>
+</li>
+
+
+</ul>
+</div>
+
+</li>
+
+
+
+
+
+
+</ul><ul>
+
+<li class="c-nav__menuitem c-nav__menuitem--level1 c-nav__menuitem--withsubmenu c-nav__menuitem--trend">
+<a class="c-nav__menulink" href="http://stg.minelli.fr/femme-selections" data-action="level-2">
+S&eacute;lections
+
+<i class="c-icon--arrow-bottom"></i>
+
+</a>
+
+<div class="c-nav__submenu level-2" data-ui="subMenu">
+<ul>
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/femme-tendances-tendance2" class="c-nav__menulink">
+Dark chic
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/femme-tendances-tendance4" class="c-nav__menulink">
+Urban nature
+</a>
+</li>
+
+
+</ul>
+</div>
+
+</li>
+
+</ul>
+<div class="c-nav__menubanner">
+<!-- dwMarker="slot" dwContentID="cat-menunav-banner" dwContext="category" dwContextID="femme"-->
+
+
+
+
+
+
+
+
+
+<img alt="" src="https://stg.minelli.fr/on/demandware.static/-/Library-Sites-SharedLibrary-MIN/fr/dwa78028cd/header/menu-banner.jpg" title="" />
+
+
+
+</div>
+</div>
+</div>
+
+
+</li>
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level0 ">
+
+<a class=" c-nav__menulink" href="http://stg.minelli.fr/homme" data-action="level-1">
+<span>Homme</span>
+
+<i class="c-icon--arrow-bottom"></i>
+
+
+</a>
+<!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/categoryflyout.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/components/header/categoryflyout.isml" -->
+
+
+
+
+
+<div class="c-nav__submenu level-1" data-ui="subMenu">
+<div class="c-nav__submenuinner">
+<ul class="c-nav__menulist menu-vertical">
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level1 c-nav__menuitem--withsubmenu ">
+<a class="c-nav__menulink" href="http://stg.minelli.fr/chaussures-homme" data-action="level-2">
+Chaussures
+
+<i class="c-icon--arrow-bottom"></i>
+
+</a>
+
+<div class="c-nav__submenu level-2" data-ui="subMenu">
+<ul>
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/homme-chaussures-derbies" class="c-nav__menulink">
+Derbies
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/homme-chaussures-mocassins" class="c-nav__menulink">
+Mocassins
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/homme-chaussures-richelieux" class="c-nav__menulink">
+Richelieux
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/homme-chaussures-boots" class="c-nav__menulink">
+Boots
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/homme-chaussures-baskets" class="c-nav__menulink">
+Baskets
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 c-nav__menuitem--allProducts">
+<a href="http://stg.minelli.fr/homme-chaussures-toutes-chaussures" class="c-nav__menulink">
+Toutes les chaussures
+</a>
+</li>
+
+
+</ul>
+</div>
+
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level1 c-nav__menuitem--withsubmenu ">
+<a class="c-nav__menulink" href="http://stg.minelli.fr/homme-maroquinerie" data-action="level-2">
+Maroquinerie
+
+<i class="c-icon--arrow-bottom"></i>
+
+</a>
+
+<div class="c-nav__submenu level-2" data-ui="subMenu">
+<ul>
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/homme-maroquinerie-sacs-petite-maroquinerie" class="c-nav__menulink">
+Sacs et petites maroquineries
+</a>
+</li>
+
+
+</ul>
+</div>
+
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level1 c-nav__menuitem--withsubmenu ">
+<a class="c-nav__menulink" href="http://stg.minelli.fr/homme-accessoires" data-action="level-2">
+Accessoires
+
+<i class="c-icon--arrow-bottom"></i>
+
+</a>
+
+<div class="c-nav__submenu level-2" data-ui="subMenu">
+<ul>
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/homme-accessoires-chaussettes" class="c-nav__menulink">
+Chaussettes
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/homme-accessoires-ceintures" class="c-nav__menulink">
+Ceintures
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/homme-accessoires-foulards-et-%C3%A9charpes" class="c-nav__menulink">
+Foulards et &eacute;charpes
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 c-nav__menuitem--allProducts">
+<a href="http://stg.minelli.fr/homme-accessoires-tous-les-accessoires" class="c-nav__menulink">
+Tous les accessoires
+</a>
+</li>
+
+
+</ul>
+</div>
+
+</li>
+
+</ul>
+<div class="c-nav__menubanner">
+<!-- dwMarker="slot" dwContentID="cat-menunav-banner" dwContext="category" dwContextID="homme"-->
+
+
+
+</div>
+</div>
+</div>
+
+
+</li>
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level0 ">
+
+<a class=" c-nav__menulink" href="http://stg.minelli.fr/enfant" data-action="level-1">
+<span>Enfant</span>
+
+<i class="c-icon--arrow-bottom"></i>
+
+
+</a>
+<!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/categoryflyout.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/components/header/categoryflyout.isml" -->
+
+
+
+
+
+<div class="c-nav__submenu level-1" data-ui="subMenu">
+<div class="c-nav__submenuinner">
+<ul class="c-nav__menulist menu-vertical">
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level1 c-nav__menuitem--withsubmenu ">
+<a class="c-nav__menulink" href="http://stg.minelli.fr/enfant-chaussures" data-action="level-2">
+Chaussures
+
+<i class="c-icon--arrow-bottom"></i>
+
+</a>
+
+<div class="c-nav__submenu level-2" data-ui="subMenu">
+<ul>
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/enfant-chaussures-fille" class="c-nav__menulink">
+Fille
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/enfant-chaussures-gar%C3%A7on" class="c-nav__menulink">
+Gar&ccedil;on
+</a>
+</li>
+
+
+</ul>
+</div>
+
+</li>
+
+</ul>
+<div class="c-nav__menubanner">
+<!-- dwMarker="slot" dwContentID="cat-menunav-banner" dwContext="category" dwContextID="enfant"-->
+
+
+
+
+
+
+
+
+
+<p><img alt="" src="https://stg.minelli.fr/on/demandware.static/-/Library-Sites-SharedLibrary-MIN/fr/dw46ae2d15/Menu-banner-enfant-AH18.jpg" title="" /></p>
+
+
+
+</div>
+</div>
+</div>
+
+
+</li>
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level0 ">
+
+<a class=" c-nav__menulink" href="http://stg.minelli.fr/maroquinerie" data-action="level-1">
+<span>Maroquinerie</span>
+
+<i class="c-icon--arrow-bottom"></i>
+
+
+</a>
+<!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/categoryflyout.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/components/header/categoryflyout.isml" -->
+
+
+
+
+
+<div class="c-nav__submenu level-1" data-ui="subMenu">
+<div class="c-nav__submenuinner">
+<ul class="c-nav__menulist menu-vertical">
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level1 c-nav__menuitem--withsubmenu ">
+<a class="c-nav__menulink" href="http://stg.minelli.fr/maroquinerie-femme" data-action="level-2">
+Femme
+
+<i class="c-icon--arrow-bottom"></i>
+
+</a>
+
+<div class="c-nav__submenu level-2" data-ui="subMenu">
+<ul>
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/maroquinerie-femme-grands-sacs" class="c-nav__menulink">
+Sacs grand format
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/maroquinerie-femme-petits-sacs" class="c-nav__menulink">
+Sacs petit format
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 ">
+<a href="http://stg.minelli.fr/maroquinerie-femme-petites-maros-et-pochettes" class="c-nav__menulink">
+Petites maroquineries et pochettes
+</a>
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 c-nav__menuitem--allProducts">
+<a href="http://stg.minelli.fr/maroquinerie-femme-toute-maroquinerie" class="c-nav__menulink">
+Toute la maroquinerie femme
+</a>
+</li>
+
+
+</ul>
+</div>
+
+</li>
+
+</ul>
+<div class="c-nav__menubanner">
+<!-- dwMarker="slot" dwContentID="cat-menunav-banner" dwContext="category" dwContextID="maroquinerie"-->
+
+
+
+</div>
+</div>
+</div>
+
+
+</li>
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level0 ">
+
+<a class=" c-nav__menulink" href="http://stg.minelli.fr/outlet" data-action="level-1">
+<span>Outlet</span>
+
+<i class="c-icon--arrow-bottom"></i>
+
+
+</a>
+<!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/categoryflyout.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/components/header/categoryflyout.isml" -->
+
+
+
+
+
+<div class="c-nav__submenu level-1" data-ui="subMenu">
+<div class="c-nav__submenuinner">
+<ul class="c-nav__menulist menu-vertical">
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level1 c-nav__menuitem--withsubmenu ">
+<a class="c-nav__menulink" href="http://stg.minelli.fr/outlet-femme" data-action="level-2">
+Femme
+
+<i class="c-icon--arrow-bottom"></i>
+
+</a>
+
+<div class="c-nav__submenu level-2" data-ui="subMenu">
+<ul>
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 c-nav__menuitem--allProducts">
+<a href="http://stg.minelli.fr/outlet-toutes-les-chaussures-femme" class="c-nav__menulink">
+Toutes les chaussures
+</a>
+</li>
+
+
+</ul>
+</div>
+
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level1 c-nav__menuitem--withsubmenu ">
+<a class="c-nav__menulink" href="http://stg.minelli.fr/outlet-homme" data-action="level-2">
+Homme
+
+<i class="c-icon--arrow-bottom"></i>
+
+</a>
+
+<div class="c-nav__submenu level-2" data-ui="subMenu">
+<ul>
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 c-nav__menuitem--allProducts">
+<a href="http://stg.minelli.fr/outlet-toutes-les-chaussures-homme" class="c-nav__menulink">
+Toutes les chaussures
+</a>
+</li>
+
+
+</ul>
+</div>
+
+</li>
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level1 c-nav__menuitem--withsubmenu ">
+<a class="c-nav__menulink" href="http://stg.minelli.fr/outlet-maroquinerie" data-action="level-2">
+Maroquinerie
+
+<i class="c-icon--arrow-bottom"></i>
+
+</a>
+
+<div class="c-nav__submenu level-2" data-ui="subMenu">
+<ul>
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level2 c-nav__menuitem--allProducts">
+<a href="http://stg.minelli.fr/outlet-toute-la-maroquinerie" class="c-nav__menulink">
+Toute la maroquinerie
+</a>
+</li>
+
+
+</ul>
+</div>
+
+</li>
+
+</ul>
+<div class="c-nav__menubanner">
+<!-- dwMarker="slot" dwContentID="cat-menunav-banner" dwContext="category" dwContextID="outlet"-->
+
+
+
+</div>
+</div>
+</div>
+
+
+</li>
+
+<!-- dwMarker="slot" dwContentID="cat-menunav-category" dwContext="global"-->
+
+
+
+
+
+
+
+
+
+<li class="c-nav__menuitem c-nav__menuitem--level0 ">
+  <a class=" c-nav__menulink" href="#" data-action="">
+    <span>Walk with Minelli</span>
+  </a>
+  <div class="c-nav__submenu level-1" data-ui="subMenu">
+    <div class="c-nav__submenuinner">
+      <ul class="c-nav__menulist menu-vertical">
+        <li class="c-nav__menuitem c-nav__menuitem--level1 c-nav__menuitem--withsubmenu ">
+          <a class="c-nav__menulink" href="#" data-action="level-2">
+Fashion
+          </a>
+          <div class="c-nav__submenu level-2" data-ui="subMenu">
+            <ul>
+              <li class="c-nav__menuitem c-nav__menuitem--level2 ">
+                <a href="https://stg.minelli.fr/magazine" class="c-nav__menulink">
+News
+                </a>
+              </li>
+              <li class="c-nav__menuitem c-nav__menuitem--level2 ">
+                <a href="#" class="c-nav__menulink">
+Nos bloggeuses
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="c-nav__menuitem c-nav__menuitem--level1 c-nav__menuitem--withsubmenu ">
+          <a class="c-nav__menulink" href="#" data-action="level-2">
+#Walkwith Minelli
+          </a>
+          <div class="c-nav__submenu level-2" data-ui="subMenu">
+            <ul>
+              <li class="c-nav__menuitem c-nav__menuitem--level2 ">
+                <a href="#" class="c-nav__menulink">
+Manifeste
+                </a>
+              </li>
+              <li class="c-nav__menuitem c-nav__menuitem--level2 ">
+                <a href="#" class="c-nav__menulink">
+Camille
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <ul>
+        <li class="c-nav__menuitem c-nav__menuitem--level1 c-nav__menuitem--withsubmenu">
+          <a class="c-nav__menulink" href="#" data-action="level-2">
+Les campagnes
+          </a>
+          <div class="c-nav__submenu level-2" data-ui="subMenu">
+            <ul>
+              <li class="c-nav__menuitem c-nav__menuitem--level2 ">
+                <a href="#" class="c-nav__menulink">
+#WALKWITHMINELLI – PE 18
+                </a>
+              </li>
+              <li class="c-nav__menuitem c-nav__menuitem--level2 ">
+                <a href="#" class="c-nav__menulink">
+#WALKWITHMINELLI – AH 17
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div class="c-nav__menubanner">
+        <!-- dwMarker="slot" dwContentID="cat-menunav-banner" dwContext="category" dwContextID="femme"-->
+        <img alt="banner" src="https://stg.minelli.fr/on/demandware.static/-/Library-Sites-SharedLibrary-MIN/fr/dwa78028cd/header/menu-banner.jpg" title="" />
+      </div>
+    </div>
+  </div>
+</li>
+
+
+
+</ul>
+
+
+</nav>
+<h1 class="c-header__logo">
+
+<a href="/on/demandware.store/Sites-MIN_FR-Site/fr_FR/Home-Show" title="Accueil Salesforce Commerce Cloud SiteGenesis"><!-- dwMarker="link" dwPipelineTitle="Home-Show (app_smc_controllers)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Home.js&amp;start=Show" -->
+<img src="/on/demandware.static/Sites-MIN_FR-Site/-/default/dw0080e7b8/images/logo.png" alt="Salesforce Commerce Cloud SiteGenesis">
+</a>
+</h1>
+<div class="c-header__stores">
+
+<a href="http://stg.minelli.fr/on/demandware.store/Sites-MIN_FR-Site/fr_FR/Stores-Find" title="Localiser des magasins"><!-- dwMarker="link" dwPipelineTitle="Stores-Find (app_smc_controllers)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Stores.js&amp;start=Find" -->
+<i class="c-icon--pin"></i>
+<span class="c-header__storeslabel">Nos boutiques</span>
+</a>
+</div>
+<div class="c-header__searchicon">
+<a href="#" class="js-vex" data-component="vex" data-vexContent="#suggest-search" data-vexClass="vex-search">
+<i class="c-icon--search"></i>
+</a>
+</div>
+
+<div class="c-header__account c-topaccount">
+<a href="/on/demandware.store/Sites-MIN_FR-Site/fr_FR/Fidelity-Show" class="c-topaccount__link c-topaccount__link--fidelity"><!-- dwMarker="link" dwPipelineTitle="Fidelity-Show (app_smc_controllers)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Fidelity.js&amp;start=Show" -->global.header.loyalty</a>
+
+
+
+<!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_smc_core/cartridge/templates/default/components/header/headercustomerinfo.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Home.js&amp;start=IncludeHeaderCustomerInfo&quot;,&quot;PageProcessingTime&quot;:37,&quot;TemplateTitle&quot;:&quot;/default/components/header/headercustomerinfo.isml (app_smc_core)&quot;,&quot;PipelineTitle&quot;:&quot;Home-IncludeHeaderCustomerInfo (app_smc_controllers)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Home-IncludeHeaderCustomerInfo (app_smc_controllers)" dwPipelineURL="http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Home.js&start=IncludeHeaderCustomerInfo" dwIsController="true" dwTemplateTitle="/default/components/header/headercustomerinfo.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/components/header/headercustomerinfo.isml" --><div class="c-topaccount__info c-offlayer" data-component="offLayer">
+<a class="c-topaccount__link" href="https://stg.minelli.fr/on/demandware.store/Sites-MIN_FR-Site/fr_FR/Account-Show" title="Utilisateur: Mon compte" data-action="openOffLayer"><!-- dwMarker="link" dwPipelineTitle="Account-Show (app_smc_controllers)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Account.js&amp;start=Show" -->
+<i class="c-topaccount__icon c-icon--account"></i>
+<span class="c-topaccount__label">Mon compte</span>
+</a>
+<div class="c-topaccount__panel c-offlayer__panel" data-ui="offLayerPanel">
+<a href="#" data-action="closeOffLayer" class="c-offlayer__close"><i></i></a>
+<div class="c-topaccount__wrapcontent">
+<h3 class="c-topaccount__title">Bienvenue!</h3>
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/layerloginform.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/components/header/layerloginform.isml" -->
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/util/modules.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/util/modules.isml" -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="c-topaccount__notloggedin">
+  <form class="c-form" id="LoginFormLayer" action="https://stg.minelli.fr/on/demandware.store/Sites-MIN_FR-Site/fr_FR/Login-LoginForm"><!-- dwMarker="form" dwPipelineTitle="Login-LoginForm (app_smc_controllers)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Login.js&amp;start=LoginForm" -->
+    <!-- dwMarker="linclude" dwTemplateTitle="/default/util/inputfield.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/util/inputfield.isml" -->
+
+
+
+<div class="form-row c-form__row c-form__row c-topaccount__row required">
+
+
+
+
+
+
+
+<div class="field-wrapper">
+<input  placeholder="Email*" class="input-text c-form__inputnormal c-topaccount__inputnormal required" type="email"  id="dwfrm_login_username_d0swgqlliybg" name="dwfrm_login_username_d0swgqlliybg" value="" autocomplete="off"  data-rule-required="true" data-msg-required="Merci de renseigner le champ 'email'" data-rule-regex="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$" data-msg-regex="email est au mauvais format" data-rule-maxlength="2147483647" data-msg-maxlength="email n'est pas à la bonne taille"/>
+</div>
+
+
+
+<div class="form-caption c-form__caption"></div>
+
+</div>
+
+
+    <!-- dwMarker="linclude" dwTemplateTitle="/default/util/inputfield.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/util/inputfield.isml" -->
+
+
+
+<div class="form-row c-form__row c-form__row c-topaccount__row required">
+
+
+
+
+
+
+
+<div class="field-wrapper">
+<input  placeholder="Mot de passe*" class="input-text c-form__inputnormal c-topaccount__inputnormal required" type="password"  id="dwfrm_login_password_d0wahtzxyttx" name="dwfrm_login_password_d0wahtzxyttx" value="" autocomplete="off"  data-rule-required="true" data-msg-required="Merci de renseigner le champ 'Mot de passe'" data-rule-maxlength="2147483647" data-msg-maxlength="Mot de passe n'est pas à la bonne taille"/>
+</div>
+
+
+
+<div class="form-caption c-form__caption"></div>
+
+</div>
+
+
+    <a class="c-login__passwordresetlink c-topaccount__pwdlink" href="#" title="Mot de passe oubli&eacute;">
+      Mot de passe oubli&eacute;
+    </a>
+    <!-- dwMarker="linclude" dwTemplateTitle="/default/account/password/requestpasswordreset.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/account/password/requestpasswordreset.isml" -->
+<!-- dwMarker="linclude" dwTemplateTitle="/default/util/modules.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/util/modules.isml" -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="vex-passwordreset-popup">
+  <div class="vex-overlay vex-overlay-passwordreset-popup"></div>
+  <div class="vex">
+    <div class="vex-content">
+      <h1>Demande de r&eacute;initialisation de votre mot de passe</h1>
+
+      <!-- dwMarker="linclude" dwTemplateTitle="/default/util/inputfield.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/util/inputfield.isml" -->
+
+
+
+<div class="form-row c-form__row  required">
+
+
+
+
+
+
+
+<div class="field-wrapper">
+<input  placeholder="E-mail*" class="input-text c-form__inputnormal required" type="text"  id="dwfrm_requestpassword_email_d0lkaifgyvhh" name="dwfrm_requestpassword_email_d0lkaifgyvhh" value=""  data-rule-required="true" data-msg-required="Merci de renseigner le champ 'E-mail'" data-rule-regex="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$" data-msg-regex="E-mail est au mauvais format" data-rule-maxlength="2147483647" data-msg-maxlength="E-mail n'est pas à la bonne taille"/>
+</div>
+
+
+
+<div class="form-caption c-form__caption"></div>
+
+</div>
+
+      <input type="hidden" name="csrf_token" value="yxaIS3cTDEr6nHb_UkXvkumS1tolSPzQw3dFc6wsiP5Ntm665FzI7EHy7V4ZA1_Z0wTe_7laLPsP5La7Y9C6fOerXR-TrAM7RLYSYOOT5-YEjnW5MBcssYinJT_2Q3tKoRFNtdhb_9mmhImvlqnwyH0gr7cqXhkWKx6M293IpynUzq24wBI"/>
+      <button type="button" class="c-formbutton c-button__primary c-button__small c-button--full" value="Envoyer" name="dwfrm_requestpassword_send">
+        Envoyer
+      </button>
+      <div class="vex-close vex-close-password-reset"></div>
+    </div>
+  </div>
+</div>
+
+    <input type="hidden" name="csrf_token" value="f7FGFg6l2x1cZYS4o70DreOAduDQ8DJe_rX7WR1UdmCxwIRdnwytjlq9jjbOmv72L7eKpD_4sj0OwpuYm7prEU0Qnz688wVfIbEBkMG6VShzllHH80-YXps9CLv5rBdiRe___KbVJxdmsUeDELC2FpJU15SR49Q_M6HUQjXh6ZOafGNba4s"/>
+    <div class="c-form__button">
+      <button type="submit" class="c-formbutton c-button__primary  c-button--full c-button__small c-topaccount__loginbutton" value="Se connecter" name="dwfrm_login_login">
+        se connecter
+      </button>
+    </div>
+  </form>
+
+  <div class="c-topaccount__register c-topaccount--cosmoparisonly">
+    <div class="c-topaccount_registerquestion">Pas encore inscrit?</div>
+    <a href="/on/demandware.store/Sites-MIN_FR-Site/fr_FR/Account-StartRegister" class="c-topaccount__registerlink"><!-- dwMarker="link" dwPipelineTitle="Account-StartRegister (app_smc_controllers)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Account.js&amp;start=StartRegister" -->cr&eacute;er un compte</a>
+    <div class="c-topaccount__socialtext">account.loginlayer.socialtext</div>
+  </div>
+
+  <div class="c-topaccount__or">ou</div>
+  <div class="c-topaccount__social">
+    <!-- dwMarker="linclude" dwTemplateTitle="/default/account/login/oauthlogininclude.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/account/login/oauthlogininclude.isml" -->
+
+
+
+
+
+
+<form action="https://stg.minelli.fr/on/demandware.store/Sites-MIN_FR-Site/fr_FR/Login-LoginForm" method="post" class="clearfix"><!-- dwMarker="form" dwPipelineTitle="Login-LoginForm (app_smc_controllers)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Login.js&amp;start=LoginForm" -->
+<button
+class="oAuthIcon c-formbutton c-button__primary c-button__small--lefticon c-button--facebook c-button--full"
+name="dwfrm_oauthlogin_login"
+>
+se connecter avec facebook
+</button>
+<input type="hidden" name="rememberme" data-remember="remembermeFacebook" value=""/>
+<input type="hidden" name="csrf_token" value="ttUsjjiObUS-xJRhQwvdhg3tNMlLpFDb44X2Z9yZzgp6HMdThmDtXuukRkMlVGQN-cgI-czQZEagjFvJHBO4Yhgcd28m8cllxpppgwswWZfXMJfFNwq2o9lIsD2uPHBr7nS26n__y2DXz0CEzfiO3tIsTl95XrKI0GdUpTSbtH6phSPvQfU"/>
+<input type="hidden" name="OAuthProvider" data-provider="OAuthProviderFacebook" value="Facebook-MIN_FR"/>
+</form>
+<form action="https://stg.minelli.fr/on/demandware.store/Sites-MIN_FR-Site/fr_FR/Login-LoginForm" method="post" class="clearfix"><!-- dwMarker="form" dwPipelineTitle="Login-LoginForm (app_smc_controllers)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Login.js&amp;start=LoginForm" -->
+<button
+class="oAuthIcon c-formbutton c-button__primary c-button__small--lefticon c-button--google c-button--full"
+name="dwfrm_oauthlogin_login"
+>
+se connecter avec google
+</button>
+<input type="hidden" name="rememberme" data-remember="remembermeGooglePlus" value=""/>
+<input type="hidden" name="csrf_token" value="R0PeiDjNNNk64HhGBl7hmi05YELkJ98l4V5kYaP1RqEkJtgDekuxT1O2aYgzWS6iG5pAxmZQeAFn32dqPJmF8cLCkL3E06BTViOq56OZ_BErcRDgJAlKS3kHOGZ0XHNfFg07WElUVDI9mA6VVlkCxVXCBqLbiP1N0H8PgjVdqywMRMdeX2s"/>
+<input type="hidden" name="OAuthProvider" data-provider="OAuthProviderGooglePlus" value="GooglePlus-MIN_FR"/>
+</form>
+
+
+    <div class="c-topaccount--clearfix"></div>
+  </div>
+  <div class="c-topaccount__register">
+    <div class="c-topaccount_registerquestion">Pas encore inscrit?</div>
+    <a href="/on/demandware.store/Sites-MIN_FR-Site/fr_FR/Account-StartRegister" class="c-topaccount__registerlink"><!-- dwMarker="link" dwPipelineTitle="Account-StartRegister (app_smc_controllers)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Account.js&amp;start=StartRegister" -->cr&eacute;er un compte</a>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+
+<a href="/on/demandware.store/Sites-MIN_FR-Site/fr_FR/Wishlist-Show" class="c-topaccount__link c-topaccount__link--wishlist"><!-- dwMarker="link" dwPipelineTitle="Wishlist-Show (app_smc_controllers)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Wishlist.js&amp;start=Show" --></a>
+</div>
+
+
+<div class="c-header__cart" data-ui="openMiniCart">
+
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/util/modules.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/util/modules.isml" -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/util/reporting/ReportBasket.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/util/reporting/ReportBasket.isml" -->
+
+
+
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/util/reporting/ReportSourceCodes.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/util/reporting/ReportSourceCodes.isml" -->
+
+
+<!-- Report any requested source code -->
+
+<!-- Report the active source code -->
+
+
+
+
+
+<!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_smc_core/cartridge/templates/default/checkout/cart/minicart/minicart.isml&quot;,&quot;IsController&quot;:true,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Cart.js&amp;start=MiniCart&quot;,&quot;PageProcessingTime&quot;:55,&quot;TemplateTitle&quot;:&quot;/default/checkout/cart/minicart/minicart.isml (app_smc_core)&quot;,&quot;PipelineTitle&quot;:&quot;Cart-MiniCart (app_smc_controllers)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Cart-MiniCart (app_smc_controllers)" dwPipelineURL="http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Cart.js&start=MiniCart" dwIsController="true" dwTemplateTitle="/default/checkout/cart/minicart/minicart.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/checkout/cart/minicart/minicart.isml" --><div class="c-minicart c-offlayer" >
+<div class="c-minicart__total" data-ui="minicartTotal">
+<a class="c-minicart__link" href="https://stg.minelli.fr/on/demandware.store/Sites-MIN_FR-Site/fr_FR/Cart-Show" title="Afficher le panier" ><!-- dwMarker="link" dwPipelineTitle="Cart-Show (app_smc_controllers)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Cart.js&amp;start=Show" -->
+<i class="c-minicart__icon c-icon--cart"></i>
+<span class="c-minicart__label">
+Panier
+</span>
+<span class="c-minicart__qty minicart__quantity">
+0
+</span>
+</a>
+</div>
+
+
+</div>
+
+</div>
+
+<div class="c-header__search">
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/search/simplesearch.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/search/simplesearch.isml" -->
+
+<form role="search" action="/on/demandware.store/Sites-MIN_FR-Site/fr_FR/Search-Show" method="get" name="simpleSearch" class="c-topsearch js-vex" data-component="vex" data-vexContent="#suggest-search" data-vexClass="vex-search"><!-- dwMarker="form" dwPipelineTitle="Search-Show (app_smc_controllers)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Search.js&amp;start=Show" -->
+<fieldset>
+<input type="text" id="q" name="q" class="c-topsearch__field" value="" placeholder="Je recherche ..." />
+<input type="hidden" name="lang" value="fr_FR"/>
+<button type="submit" class="c-topsearch__button">
+<i class="c-icon--search"></i>
+</button>
+</fieldset>
+</form>
+<div class="c-topsearchlayer c-topsearch__layer" id="suggest-search">
+<form role="search" action="/on/demandware.store/Sites-MIN_FR-Site/fr_FR/Search-Show" method="get" name="simpleSearch"><!-- dwMarker="form" dwPipelineTitle="Search-Show (app_smc_controllers)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Search.js&amp;start=Show" -->
+<fieldset>
+<div class="c-suggest__label">Que recherchez vous ?</div>
+<input type="text" name="q" class="c-topsearch__field" value="" placeholder="Je recherche ..." />
+<div class="c-suggest__separator"></div>
+<button type="submit" class="c-suggest__button">
+Ok
+</button>
+</fieldset>
+</form>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<div id="main" role="main" class="full-width clearfix l-site__container">
+<div class="c-breadcrumbs--account">
+<!-- dwMarker="linclude" dwTemplateTitle="/default/components/breadcrumbs.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/components/breadcrumbs.isml" -->
+
+
+<div class="l-productslist__breadcrumbs c-breadcrumbs c-landing__breadcrumb">
+<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+
+
+<li class="c-breadcrumbs__item c-breadcrumbs__item--home" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+
+<a class="c-breadcrumbs__link" href="https://stg.minelli.fr/on/demandware.store/Sites-MIN_FR-Site/fr_FR/Home-Show" title="Aller &agrave; Accueil" itemprop="item"><!-- dwMarker="link" dwPipelineTitle="Home-Show (app_smc_controllers)" dwIsController="true" dwPipelineURL="http://localhost:60606/target=/app_smc_controllers/cartridge/controllers/Home.js&amp;start=Show" -->
+
+<span itemprop="name">
+Accueil
+</span>
+<meta itemprop="position" content="1" />
+</a>
+</li>
+
+
+
+<li class="c-breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+
+<a class="c-breadcrumbs__link" title="Guide de collection" itemprop="item">
+
+<span itemprop="name">
+Guide de collection
+</span>
+<meta itemprop="position" content="2" />
+</a>
+</li>
+
+
+
+
+
+</ul>
+</div>
+
+</div>
+<div id="primary" class="primary-content">
+<!-- dwMarker="decorator" dwTemplateTitle="/default/content/content/pt_content.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/content/content/pt_content.isml" -->
+
+
+
+
+
+
+
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/content/content/htmlcontentasset.isml (app_smc_core)" dwTemplateURL="http://localhost:60606/target=/app_smc_core/cartridge/templates/default/content/content/htmlcontentasset.isml" -->
+
+
+
+
+
+
+
+<div class="content-asset">

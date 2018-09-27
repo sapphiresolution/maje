@@ -1,0 +1,2463 @@
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html prefix="og: http://ogp.me/ns#" lang="en"> <!--<![endif]-->
+
+<head>
+
+
+	<!-- dwMarker="linclude" dwTemplateTitle="/default/util/modules.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/util/modules.isml" -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/htmlhead.isml (app_maje_core_ret)" dwTemplateURL="http://localhost:60606/target=/app_maje_core_ret/cartridge/templates/default/components/header/htmlhead.isml" -->
+
+
+<meta charset=UTF-8>
+
+
+
+
+
+
+	<title>MAJE - Confirmation de commande </title>
+
+
+
+<link href="/on/demandware.static/Sites-Maje-FR-Site/-/fr/v1509354244968/images/favicon.ico" rel="shortcut icon" />
+
+
+
+
+
+
+
+	<meta name="description" content=" "/>
+
+
+
+	<meta name="keywords" content=" "/>
+
+
+
+
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/components/header/htmlhead_UI.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/components/header/htmlhead_UI.isml" -->
+
+
+
+
+<link href="/on/demandware.static/Sites-Maje-FR-Site/-/fr/v1509354244968/lib/jquery/ui/jquery.ui.all.css" type="text/css" rel="stylesheet" />
+
+<!-- jQuery -->
+<script src="/on/demandware.static/Sites-Maje-FR-Site/-/fr/v1509354244968/lib/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script>var app={};</script>
+<!--[if lt IE 9]>
+<script src="/on/demandware.static/Sites-Maje-FR-Site/-/fr/v1509354244968/js/lib/html5.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript">//<!--
+/* <![CDATA[ (head-active_data.js) */
+var dw = (window.dw || {});
+dw.ac = {
+		_analytics: null,
+		_events: [],
+		_category: "",
+		_capture: function(configs) {
+				if (Object.prototype.toString.call(configs) === "[object Array]") {
+						configs.forEach(captureObject);
+						return;
+				}
+				dw.ac._events.push(configs);
+		},
+		capture: function() { dw.ac._capture(arguments); },
+		EV_PRD_SEARCHHIT: "searchhit",
+		EV_PRD_DETAIL: "detail",
+		EV_PRD_RECOMMENDATION: "recommendation",
+		EV_PRD_SETPRODUCT: "setproduct",
+		applyContext: function(context) {
+				if (typeof context === "object" && context.hasOwnProperty("category")) {
+					dw.ac._category = context.category;
+				}
+		},
+		setDWAnalytics: function(analytics) {
+				dw.ac._analytics = analytics;
+		}
+};
+/* ]]> */
+// -->
+</script><script type="text/javascript">//<!--
+/* <![CDATA[ (head-cquotient.js) */
+var CQuotient = window.CQuotient = {};
+CQuotient.clientId = 'aaon-Maje-FR';
+CQuotient.activities = [];
+CQuotient.cqcid='';
+CQuotient.cquid='';
+CQuotient.initFromCookies = function () {
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf('cqcid=') == 0) {
+			CQuotient.cqcid=c.substring('cqcid='.length,c.length);
+		} else if (c.indexOf('cquid=') == 0) {
+			CQuotient.cquid=c.substring('cquid='.length,c.length);
+			break;
+		}
+	}
+}
+CQuotient.getCQCookieId = function () {
+	if(window.CQuotient.cqcid == '')
+		window.CQuotient.initFromCookies();
+	return window.CQuotient.cqcid;
+};
+CQuotient.getCQUserId = function () {
+	if(window.CQuotient.cquid == '')
+		window.CQuotient.initFromCookies();
+	return window.CQuotient.cquid;
+};
+/* ]]> */
+// -->
+</script>
+
+
+
+<link rel="stylesheet" media="print" href="/on/demandware.static/Sites-Maje-FR-Site/-/fr/v1509354244968/optimized/print.css" />
+<link rel="stylesheet" href="/on/demandware.static/Sites-Maje-FR-Site/-/fr/v1509354244968/optimized/maje.css" />
+<link rel="stylesheet" href="/on/demandware.static/Sites-Maje-FR-Site/-/fr/v1509354244968/optimized/country_specific.css" />
+
+
+
+		<meta name="google-site-verification" content="CHqfwQ1wLczUiGZgkjKVZeAtCZto_GtA9uQ27wODWqk" />
+
+
+
+
+
+
+
+
+
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no" />
+
+
+
+
+
+
+
+
+	<!-- dwMarker="linclude" dwTemplateTitle="/default/checkout/pt_checkout_UI.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/checkout/pt_checkout_UI.isml" -->
+
+
+
+
+
+
+
+	<!-- dwMarker="linclude" dwTemplateTitle="/default/seo/opengraph.isml (app_smcp_core)" dwTemplateURL="http://localhost:60606/target=/app_smcp_core/cartridge/templates/default/seo/opengraph.isml" -->
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/util/modules.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/util/modules.isml" -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta property="fb:app_id" content="948411401943483" />
+<meta property="og:url" content="https://fr-staging.maje.com/on/demandware.store/Sites-Maje-FR-Site/fr_FR/COSummary-GoToShowConfirmation" />
+<meta property="og:site_name" content="Maje-FR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="MAJE - Confirmation de commande" />
+<meta property="og:image" content="" />
+<meta property="og:image:url" content="" />
+<meta property="og:description" content="Vous etes sur la description par d&eacute;faut pour le protocole Open Graph du site Maje FR (&agrave; contribuer dans Merchant Tools &gt;  Site Preferences &gt;  Custom Site Preferences &gt; SEO &gt; default description SEO Open Graph : pour chaque site et chaque langue)" />
+
+
+
+
+<meta name="rqid" content="lhLqRFoAU4KMAgAK"/><link type="text/css" href="/on/demandware.static/Sites-Site/-/-/internal/css/dwux-sf-15.5.css?v=17.1" rel="stylesheet" /></head>
+
+<body><iframe src="/on/demandware.store/Sites-Maje-FR-Site/fr/__SYSTEM__StorefrontToolkit-Start" width="0px" height="0px" id="DW-SFToolkit"></iframe>
+<span id="DW-SFToolkit-config" data-data="{&quot;baseURL&quot;:&quot;/on/demandware.static/Sites-Site/-/-/internal/&quot;,&quot;editURL&quot;:&quot;https://fr-staging.maje.com/on/demandware.store/Sites-Site/-/&quot;,&quot;site&quot;:&quot;Maje-FR&quot;,&quot;cp&quot;:{&quot;serverDateTimePattern&quot;:&quot;yyyyMMddHHmm&quot;,&quot;datePattern&quot;:&quot;dd/MM/yyyy&quot;,&quot;timePattern&quot;:&quot;HH:mm&quot;}}" ></span>
+<script type="application/javascript" src="/on/demandware.static/Sites-Site/-/-/internal/jscript/dwux-init.js?v=16.7.3"></script><!-- dwMarker="dw-object-page" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_maje_core/cartridge/templates/default/checkout/confirmation/confirmation.isml&quot;,&quot;IsController&quot;:false,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_smcp_core/cartridge/pipelines/COSummary.xml&amp;start=GoToShowConfirmation&quot;,&quot;PageProcessingTime&quot;:227,&quot;TemplateTitle&quot;:&quot;/default/checkout/confirmation/confirmation.isml (app_maje_core)&quot;,&quot;PipelineTitle&quot;:&quot;COSummary-GoToShowConfirmation (app_smcp_core)&quot;}" --><!-- dwMarker="page" dwPipelineTitle="COSummary-GoToShowConfirmation (app_smcp_core)" dwPipelineURL="http://localhost:60606/target=/app_smcp_core/cartridge/pipelines/COSummary.xml&amp;start=GoToShowConfirmation" dwIsController="false" dwTemplateTitle="/default/checkout/confirmation/confirmation.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/checkout/confirmation/confirmation.isml" -->
+	<!-- dwMarker="linclude" dwTemplateTitle="/default/util/googletags/googletagallpages.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/util/googletags/googletagallpages.isml" -->
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/util/googletags/googletaguserdata.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/util/googletags/googletaguserdata.isml" -->
+
+
+
+
+	<script>
+		//ageRange calculation
+		// "a:[<19]","b:[20-29]","c:[30-39]","d:[40-49]","e:[50-59]","f:[60-69]","g:[>70]"
+
+		var today = new Date() //Date
+		var custBirthdayStrng = new Date("null") //Date converted into String
+		var durationAge = today - custBirthdayStrng;
+		var nbyear = durationAge/(1000*60*60*24*365);
+		var custmrAgeTag = function(){
+				if(nbyear && nbyear !== null){
+					if(nbyear < 19){
+						return 'a:'+nbyear;
+					}
+					if(nbyear >= 20 && nbyear <= 29){
+						return 'b:'+nbyear;
+					}
+					if(nbyear >= 30 && nbyear <= 39){
+						return 'c:'+nbyear;
+					}
+					if(nbyear >= 40 && nbyear <= 49){
+						return 'd:'+nbyear;
+					}
+					if(nbyear >= 50 && nbyear <= 59){
+						return 'e:'+nbyear;
+					}
+					if(nbyear >= 60 && nbyear <= 69){
+						return 'f:'+nbyear;
+					}
+					if(nbyear >= 70){
+						return 'g:'+nbyear;
+					}
+				}
+				else{
+					return 'undefined';
+				}
+		}
+
+		//customerLifeTimeValue calculation
+		// "a:0","b:[1-99]","c:[100-499]","d:[500-999]","e:[1000-2999]","f:[3000-4999]","g:[>5000]","undefined" // si problème avec la valeur dans BO
+
+		var custmrLfTimeVal = null;
+		var custmrLfTimeValTag = function(){
+				if(custmrLfTimeVal && custmrLfTimeVal !== null){
+					if(custmrLfTimeVal == 0){
+						return 'a:'+custmrLfTimeVal;
+					}
+					if(custmrLfTimeVal >= 1 && custmrLfTimeVal <= 99){
+						return 'b:'+custmrLfTimeVal;
+					}
+					if(custmrLfTimeVal >= 100 && custmrLfTimeVal <= 499){
+						return 'c:'+custmrLfTimeVal;
+					}
+					if(custmrLfTimeVal >= 500 && custmrLfTimeVal <= 999){
+						return 'd:'+custmrLfTimeVal;
+					}
+					if(custmrLfTimeVal >= 1000 && custmrLfTimeVal <= 2999){
+						return 'e:'+custmrLfTimeVal;
+					}
+					if(custmrLfTimeVal >= 3000 && custmrLfTimeVal <= 4999){
+						return 'f:'+custmrLfTimeVal;
+					}
+					if(custmrLfTimeVal >= 5000){
+						return 'g:'+custmrLfTimeVal;
+					}
+				}
+				else{
+					return 'undefined';
+				}
+		}
+
+		//customerLastOrderOldness calculation
+		// "a:0 jour","b:[1-7 jours]","c:[2-4 semaines]","d:[2-5 mois]","e:[6-12 mois]","f:[>1 an]","undefined" // si problème avec la valeur dans BO
+
+		var lastOrderDateStrng = "";
+
+
+
+		var durationOrder = today - lastOrderDateStrng;
+		var nbday = durationOrder/(1000*60*60*24);
+		var custmrLastOrderDateTag = function(){
+				if(nbday && nbday !== null){
+					if(nbday == 0){
+						return 'a:'+nbday;
+					}
+					if(nbday >= 1 && nbday <= 7){
+						return 'b:'+nbday;
+					}
+					if(nbday >= 8 && nbday <= 28){
+						return 'c:'+nbday;
+					}
+					if(nbday >= 29 && nbday <= 140){
+						return 'd:'+nbday;
+					}
+					if(nbday >= 141 && nbday <=365){
+						return 'e:'+nbday;
+					}
+					if(nbday > 365){
+						return 'f:'+nbday;
+					}
+				}
+				else{
+					return 'undefined';
+				}
+
+		}
+
+		// breadcrumbs
+		// ["aaa","bbb","ccc"], fil d'ariane
+
+		var breadcrumbsTag = function(){
+			var breadcrumb1, breadcrumb2, breadcrumb3, breadcrumb4 = '';
+			breadcrumb1 = 'Home'
+
+
+
+
+
+
+
+
+
+
+			return '[' +breadcrumb1+ ',' +breadcrumb2+ ',' +breadcrumb3+ ',' +breadcrumb4+ ']';
+		}
+
+		var converteoLayer = [{
+			/* On every page, leave all user info blank except "login state" if the user is not logged //*/
+			"user": {
+			 "profile" : {
+				"profileInfo" : {
+				 "profileID" :  'Unlogged', //only if the user is logged
+				 "name" : 'Unlogged',
+				 "email" : 'Unlogged',
+				 "gender" : 'unknown', //M or F or unknown
+				 "loginState" : 'Unlogged', // "Logged" ou "Unlogged"
+				 "type" : 'Prospect', //"Prospect" by default, "New customer" si 1 achat dans l'historique de commande, "Repeat customer" si au moins 2 achats dans son historique
+				 "ageRange": 'Unlogged', // "a:[<19]","b:[20-29]","c:[30-39]","d:[40-49]","e:[50-59]","f:[60-69]","g:[>70]" // laisser les lettres en préfixe pour faciliter le tri dans Excel
+				 "customerLifeTimeValue": custmrLfTimeValTag(custmrLfTimeVal), // "a:0","b:[1-99]","c:[100-499]","d:[500-999]","e:[1000-2999]","f:[3000-4999]","g:[>5000]","undefined" // si problème avec la valeur dans BO
+				 "customerLastOrderOldness":'Unlogged', // "a:0 jour","b:[1-7 jours]","c:[2-4 semaines]","d:[2-5 mois]","e:[6-12 mois]","f:[>1 an]","undefined" // si problème avec la valeur dans BO
+				 "customerLoyaltyCard":"" // nom de la derniere carte de fidélité du client
+				},
+			 }
+			},
+			"page": {
+				"pageInfo": {
+					"pageName" : 'fr-staging.maje.com/on/demandware.store/Sites-Maje-FR-Site/fr/COSummary-GoToShowConfirmation', // URI de la page
+					"breadcrumbs" : breadcrumbsTag, // ["aaa","bbb","ccc"], fil d'ariane
+					"pageType" : 'checkout' // home|category|product|searchresults|basket|checkout|purchase|wishlist|useraccount...
+				}
+			}
+		}];
+	</script>
+
+
+
+
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/util/googletags/googletagcontainer.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/util/googletags/googletagcontainer.isml" -->
+
+ <!-- Google Tag Manager -->
+<noscript>
+	<iframe src='//www.googletagmanager.com/ns.html?id=GTM-5TXSHM' height="0" width="0" style="display:none;visibility:hidden">
+	</iframe>
+</noscript>
+
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+	var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
+	j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})
+	(window,document,'script','converteoLayer','GTM-5TXSHM');
+</script>
+<!-- End Google Tag Manager -->
+
+	<script>
+		converteoLayer.push({event: 'pageview', 'pageview': '/confirmation'});
+	</script>
+
+	<div id="wrapper" class="pt_checkout pt_confirmation">
+
+
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/util/modules.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/util/modules.isml" -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/util/merchant_site_vars.isml (app_smcp_core)" dwTemplateURL="http://localhost:60606/target=/app_smcp_core/cartridge/templates/default/util/merchant_site_vars.isml" -->
+
+
+
+
+
+<!-- dwMarker="dw-object-rinclude" data="{&quot;TemplateURL&quot;:&quot;http://localhost:60606/target=/app_maje_core/cartridge/templates/default/components/header/headercheckout.isml&quot;,&quot;IsController&quot;:false,&quot;PipelineURL&quot;:&quot;http://localhost:60606/target=/app_smcp_core/cartridge/pipelines/Home.xml&amp;start=IncludeHeaderCheckout&quot;,&quot;PageProcessingTime&quot;:8,&quot;PageCacheExpires&quot;:&quot;07/11/2017 13:20&quot;,&quot;TemplateTitle&quot;:&quot;/default/components/header/headercheckout.isml (app_maje_core)&quot;,&quot;PipelineTitle&quot;:&quot;Home-IncludeHeaderCheckout (app_smcp_core)&quot;}" --><!-- dwMarker="rinclude" dwPipelineTitle="Home-IncludeHeaderCheckout (app_smcp_core)" dwPipelineURL="http://localhost:60606/target=/app_smcp_core/cartridge/pipelines/Home.xml&start=IncludeHeaderCheckout" dwIsController="false" dwTemplateTitle="/default/components/header/headercheckout.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/components/header/headercheckout.isml" --><div id="header" class="sticky header_checkout" role="banner">
+	<header>
+		<div class="header-message-content">
+
+		</div>
+
+		<div class="topHeader">
+			<div class="topHeaderCont clearfix">
+				<div class="topHeaderCont-sticky">
+						<div class="main-logo headLogo">
+
+
+
+
+							<span class="primary-logo maje">
+								<a href="http://fr-staging.maje.com/fr/home/">
+									<span class="icon-logo-maje-paris"></span>
+									<span>
+										MAJE
+									</span>
+								</a>
+
+							</span>
+						</div>
+
+
+					<ul class="userInfoHeader">
+
+
+
+
+
+						<li style="display:none;">
+							<a href="/fr/contactus/">
+								Service client  <span class="hidden-mob"> : </span>
+								<span class="header-phone">0 801 800 111  </span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+</div>
+
+		<div id="main" role="main">
+
+			<!-- dwMarker="decorator" dwTemplateTitle="/default/checkout/pt_orderconfirmation.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/checkout/pt_orderconfirmation.isml" -->
+
+	<!-- dwMarker="linclude" dwTemplateTitle="/default/util/modules.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/util/modules.isml" -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- dwMarker="linclude" dwTemplateTitle="/default/util/reporting/ReportOrder.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/util/reporting/ReportOrder.isml" -->
+
+
+
+
+
+
+
+
+
+
+
+	<!-- dwMarker="linclude" dwTemplateTitle="/default/util/reporting/ReportSourceCodes.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/util/reporting/ReportSourceCodes.isml" -->
+
+
+<!-- Report any requested source code -->
+
+
+<!-- Report the active source code -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div id="primary" class="primary-content">
+		<div class="cart-centred-container">
+			<div class="left-cart-col">
+				<div class="clear">
+
+					<!-- dwMarker="linclude" dwTemplateTitle="/default/util/reporting/ReportCheckout.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/util/reporting/ReportCheckout.isml" -->
+
+
+
+
+
+
+<!-- Check for empty name of checkout step -->
+
+
+
+
+
+
+
+
+				</div>
+				<div class="confirmation-left-cont block-shadow">
+
+					<!-- dwMarker="linclude" dwTemplateTitle="/default/checkout/confirmation/ordercomplete.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/checkout/confirmation/ordercomplete.isml" -->
+
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/util/googletags/googletagcheckout.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/util/googletags/googletagcheckout.isml" -->
+
+
+<script type="text/javascript">
+	var checkoutProducts = [];
+
+
+
+
+
+
+
+
+
+			checkoutProducts.push({
+				'name': 'BELIER',
+					'id': 'H17BELIER',
+					'basePrice' : '55.0',
+						'price': '55.0',
+					'brand': 'Maje',
+						'category': 'Accessoires/Collection/Bijoux',  // Utiliser un slash / comme séparateur pour spécifier 5 niveaux de hiérarchie.
+					'variant': '[TU] OR', // "[size] color", ex. "[M] white", "[S] pink"
+					'size': 'TU',
+					'color': 'OR',
+					'quantity': '1'
+			});
+
+
+	window.converteoLayer = window.converteoLayer || [];
+	if (checkoutProducts.length > 0) {
+			var maxProducts = 35; // Max objects that will be sent with 1 hit.
+			var productsPartial = [];
+			while(checkoutProducts.length) {
+					productsPartial = checkoutProducts.splice(0,maxProducts); // Split the product array into arrays with max 35 objects
+					converteoLayer.push({
+						'event': 'checkout',
+						'stepName' : 'paiement',
+						'ecommerce': {
+							'currencyCode': 'EUR',
+							'checkout': {
+								'actionField': { 'step': 5 },
+								'products': productsPartial
+							}
+						},
+						 'cartTotalAmount': '55.0'
+				});
+			}
+	}
+</script>
+
+<div class="clear">
+
+		<legend class="titleConfirmation shopSelection border-dotted">
+		Confirmation
+
+	</legend>
+	<div class="confirmation-msg">
+
+		<div class="confirmation-msg-text">
+
+			<span class="black confirmation-thanks">
+			<span class="error-message valid">✔</span>
+			Merci pour votre commande.
+			</span>
+			<br /><span class="hideinmobile-inline"><br /></span>
+			<span class="black">
+			Une confirmation vient d'&ecirc;tre envoy&eacute;e &agrave; :
+			<br>
+			<span class="mailAdress">
+				gabriel@knr.paris
+			</span>
+			<br />
+			<br />
+			Num&eacute;ro de commande :
+			<br>
+			<span class="bold">
+				n&deg; 210330402
+			</span>
+			<br />
+			<br />
+
+
+
+
+					<div class="confirmation-known-guest-login">
+						<span style="display:inline-block">Vous poss&eacute;dez d&eacute;j&agrave; un compte sur Maje.com. Pour suivre votre commande veuillez saisir votre mot de passe.</span>
+						<a href="https://fr-staging.maje.com/fr/detail-commande/?orderID=210330402">
+							<span>
+								Me connecter
+							</span>
+						</a>
+
+						<div class="confirmation-login-box" style="display:none">
+
+							<div class="main-title">
+								<h2>Gagnez du temps !</h2>
+							</div>
+
+							<div class="login-box-content known">
+							<p>Vous poss&eacute;dez d&eacute;j&agrave; un compte sur Maje.com. Pour suivre votre commande veuillez saisir votre mot de passe.</p>
+							<form action="https://fr-staging.maje.com/on/demandware.store/Sites-Maje-FR-Site/fr/COSummary-GoToShowConfirmation/C2012558149" method="post" class="clearfix popin-form-confirmation" id="dwfrm_login"><!-- dwMarker="form" dwPipelineTitle="COSummary-GoToShowConfirmation (app_smcp_core)" dwIsController="false" dwPipelineURL="http://localhost:60606/target=/app_smcp_core/cartridge/pipelines/COSummary.xml&amp;start=GoToShowConfirmation" -->
+
+									<div class="login-box clearfix">
+										<div class="login-email readonly-guest-email">
+											<!-- dwMarker="linclude" dwTemplateTitle="/default/util/inputfield.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/util/inputfield.isml" -->
+
+
+
+
+
+	<div class="form-row   required " data-required-text="1111111111111">
+
+
+
+
+
+
+
+
+
+			<label for="dwfrm_login_username_d0uhkhdlylzb">
+
+
+				<span>
+					Email  * :
+				</span>
+			</label>
+
+
+
+
+
+
+
+
+
+					<input autocapitalize="off" autocorrect="off" class="input-text email email-input required" id="dwfrm_login_username_d0uhkhdlylzb" type="text" name="dwfrm_login_username_d0uhkhdlylzb" value="gabriel@knr.paris"  maxlength="2147483647" disabled="disabled"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+										</div>
+										<div class="login-password">
+											<!-- dwMarker="linclude" dwTemplateTitle="/default/util/inputfield.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/util/inputfield.isml" -->
+
+
+
+
+
+	<div class="form-row   required " data-required-text="Veuillez saisir votre mot de passe.">
+
+
+
+
+
+
+
+
+
+			<label for="dwfrm_login_password">
+
+
+				<span>
+					Mot de passe  * :
+				</span>
+			</label>
+
+
+
+
+
+
+
+
+
+					<input class="input-text-pw password-input required" id="dwfrm_login_password" type="password" name="dwfrm_login_password" value=""  maxlength="2147483647" placeholder="mot de passe * : "/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+										</div>
+									</div>
+
+
+								<div class="links clearfix">
+									<a id="password-reset" onclick="converteoLayer.push({event: 'pageview', 'pageview': '/home/login/login_request'});" resetpassword='1' href="/on/demandware.store/Sites-Maje-FR-Site/fr/Account-PasswordResetDialog" title="Mot de passe oubli&eacute; ?" data-dlg-action='{"test":100}' data-dlg-options='{"width":600,"height":240,"closeText": "Fermer"}'><!-- dwMarker="link" dwPipelineTitle="Account-PasswordResetDialog (app_smcp_core)" dwIsController="false" dwPipelineURL="http://localhost:60606/target=/app_smcp_core/cartridge/pipelines/Account.xml&amp;start=PasswordResetDialog" -->Mot de passe oubli&eacute; ?</a>
+
+									<button type="submit" value="Sauvegarder vos informations" name="dwfrm_login_login">
+										Sauvegarder vos informations
+									</button>
+								</div>
+								<input type="hidden" name="dwfrm_login_securekey" value="361995064"/>
+
+							</form>
+							</div>
+						</div>
+					</div>
+
+
+		</div>
+	</div>
+</div>
+
+
+					<div class="details">
+						<!-- dwMarker="linclude" dwTemplateTitle="/default/checkout/confirmation/detailedsummary.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/checkout/confirmation/detailedsummary.isml" -->
+
+
+
+
+
+
+<script type="text/Javascript">
+	var detailsContent = $('.pt_checkout.pt_confirmation .detailed-summary');
+	$(document).ready(function(){
+		$('body').on('click', '.pt_checkout.pt_confirmation .details-title', function(e){
+				e.preventDefault();
+
+				if(detailsContent.not(":visible")) {
+					detailsContent.show();
+				}
+
+		});
+		$('body').on('click', '.pt_checkout.pt_confirmation .details .slideBtn', function(e){
+				e.preventDefault();
+
+				if(detailsContent.not(":visible")) {
+					detailsContent.show();
+				}
+
+		});
+
+	});
+</script>
+<p>
+<span class="details-title close">D&eacute;tails de commande n&deg; 210330402</span>
+
+</p>
+<div class="detailed-summary">
+	<div class="column">
+		<p>
+			<span>Email :</span>
+			gabriel@knr.paris
+		</p>
+
+		<p>
+			<span>
+				Mode de paiement :
+			</span>
+
+				visa
+				************1111
+
+		</p>
+
+		<p>
+			<span>
+				Date :
+			</span>
+			06/11/2017
+		</p>
+
+		<p>
+			<span>
+				Options de livraison :
+			</span>
+			Livraison Standard<br/>
+			Sous 72h
+		</p>
+	</div>
+
+	<div class="column">
+		<p>
+			<span>Adresse de livraison :</span>
+			32 QUAI LOUIS BLERIOT<br/>
+
+			75016
+			Paris<br/>
+			France<br />
+			+33 6 21 63 43 05
+		</p>
+
+
+		<p>
+			<span>Adresse de facturation :</span>
+			32 QUAI LOUIS BLERIOT<br/>
+
+			75016
+			Paris<br/>
+			France<br />
+			+33 6 21 63 43 05
+		</p>
+
+	</div>
+</div>
+					</div>
+
+					<script type="text/Javascript">
+						function backToHomePage(){
+							window.location.href = '/fr/home/';
+						}
+					</script>
+
+
+
+					<div class="form-row transparent form-row-button">
+						<button class="backlink-fancy-large" type="button" onclick="backToHomePage();return false;"><span>Retour &agrave; l'accueil</span></button>
+					</div>
+				</div>
+			</div>
+			<div class="right-cart-col">
+				<div id="secondary" class="nav summary block-shadow">
+
+					<!-- dwMarker="linclude" dwTemplateTitle="/default/checkout/minisummary.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/checkout/minisummary.isml" -->
+
+<!-- dwMarker="linclude" dwTemplateTitle="/default/util/modules.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/util/modules.isml" -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="miniSummaryCont">
+	<!-- [BL] addition -->
+
+	<span class="block-title border-dotted bold-medium">
+		Mon Panier
+		<span>(</span><span><!-- dwMarker="linclude" dwTemplateTitle="/default/checkout/cart/articleQty.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/checkout/cart/articleQty.isml" -->
+
+
+		1
+
+</span><span>)</span>
+	</span>
+
+
+
+
+	<div id="checkout-mini-cart-content">
+
+		<div class="slide4">
+			<div class="slideChild">
+				<div class="checkout-mini-cart checkout-mini-cart-products contentSlide">
+					<!-- dwMarker="linclude" dwTemplateTitle="/default/checkout/components/minilineitemscheckout.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/checkout/components/minilineitemscheckout.isml" -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<div class="checkout-mini-cart-product border-dotted" >
+				<div class="mini-cart-image">
+
+								 <img title="BELIER" src="https://sits-pod53.demandware.net/dw/image/v2/AAON_STG/on/demandware.static/-/Sites-maje-catalog-master-H13/fr/v1509354244968/images/h13/Maje_H17BELIER-05_H_P.jpg?sw=180&amp;sh=180&amp;sm=fit" />
+						 </iselse>
+
+				</div>
+				<div class="wrapper-mini-cart-name">
+					<div class="mini-cart-name">
+
+
+
+						Collier signe du zodiaque B&eacute;lier
+
+
+
+					</div>
+
+					<div class="mini-cart-remove">
+						<a href="/on/demandware.store/Sites-Maje-FR-Site/fr/CartAjax-MiniCartRemove?uuid=fb29478e5c4beb8648ba1151bd" class="minicart-remove-button"><!-- dwMarker="link" dwPipelineTitle="CartAjax-MiniCartRemove (app_smcp_core)" dwIsController="false" dwPipelineURL="http://localhost:60606/target=/app_smcp_core/cartridge/pipelines/CartAjax.xml&amp;start=MiniCartRemove" -->X&nbsp;</a>
+					</div>
+
+					<div class="mini-cart-attributes">
+						<!-- dwMarker="linclude" dwTemplateTitle="/default/product/components/displayvariationvaluesmaje.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/product/components/displayvariationvaluesmaje.isml" -->
+
+
+	<div class="attribute">
+
+		<div class="value attribute-sstitre">
+			<span>mod&egrave;le :</span> BELIER
+		</div>
+
+
+
+
+
+					<div class="value attribute-color">
+
+							<span>couleur :</span> OR
+
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<span class="value attribute-size">
+
+
+							Taille: TU
+
+					</span>
+
+
+	</div>
+
+					</div>
+
+
+					<div class="mini-cart-qty">
+						<span class="label">Qt&eacute;:</span>
+						<span class="value">1</span>
+					</div>
+
+					<div class="mini-cart-pricing clearfix">
+
+
+
+
+
+
+
+
+
+
+								<span class="price-sales">55 &#8364;</span>
+
+
+					</div>
+
+
+				</div>
+			</div>
+
+
+			<div class="clearfix"></div>
+
+
+
+
+
+
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+			<!-- dwMarker="linclude" dwTemplateTitle="/default/components/order/ordertotals.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/components/order/ordertotals.isml" -->
+
+
+
+
+
+
+
+
+
+		<div class="checkout-order-subtotals">
+		<table class="order-totals-table">
+
+			<thead>
+				<tr>
+					<th class="order-totals-item">Item</th>
+					<th class="order-totals-value">Value</th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				<tr class="order-subtotal">
+					<td class="label tt-none">Sous-total TTC</td>
+					<td class="value">55 &#8364;</td>
+				</tr>
+
+
+
+
+
+
+
+
+
+								<tr class="order-shipping first">
+									<td class="label tt-none a">
+
+										Livraison Standard
+									</td>
+									<td class="value bold">
+
+
+												Offerte
+
+
+									</td>
+								</tr>
+
+
+
+
+
+
+
+
+
+
+			</tbody>
+		</table>
+	</div>
+
+	<div class="checkout-order-totals border-dotted top">
+		<table class="order-totals-table">
+
+			<tr class="order-total">
+				<td class="label">
+
+				Total TTC
+				</td>
+
+
+
+
+
+				<td class="value black bold-medium">55 &#8364;</td>
+			</tr>
+		</table>
+	</div>
+
+
+</div>
+				</div>
+				<div class="block-shadow">
+					<!-- dwMarker="linclude" dwTemplateTitle="/default/checkout/confirmation/summaryorder.isml (app_maje_core)" dwTemplateURL="http://localhost:60606/target=/app_maje_core/cartridge/templates/default/checkout/confirmation/summaryorder.isml" -->
+
+<div id="table-order-summary">
+
+
+
+		<div id="summary-container">
+			<div class="cell-shipping-summary">
+				<span class="checkout-summary-subtitle block-title border-dotted bold-medium">Adresse de livraison</span>
+				<span class="checkout-summary-name">
+					Kaam
+					Gabriel<br />
+				</span>
+				<span class="checkout-summary-address">
+					32 QUAI LOUIS BLERIOT<br />
+
+					75016
+					Paris<br />
+					+33 6 21 63 43 05
+				</span>
+			</div>
+			<div class="cell-billing-summary">
+				<span class="checkout-summary-subtitle block-title border-dotted bold-medium">Adresse de facturation</span>
+				<span class="checkout-summary-name">
+					Kaam
+					Gabriel<br />
+				</span>
+				<span class="checkout-summary-address">
+
+						32 QUAI LOUIS BLERIOT<br />
+
+
+
+
+						75016
+
+
+						Paris<br />
+
+					+33 6 21 63 43 05
+				</span>
+			</div>
+		</div>
+
+	</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+

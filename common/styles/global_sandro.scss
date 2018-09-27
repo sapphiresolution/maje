@@ -1,0 +1,63 @@
+#browser-check { display: none!important; }
+
+/* Hide body in footer when using buggy popin */
+#QuickViewDialog > #wrapper.pt_error {
+  display: none!important;
+}
+
+##{$ID},
+.kr_content_wrapper {
+  /* VIDEO - HMTL5 */
+  video.video-responsive {
+    max-width: 100%;
+  }
+  .video-wrapper,
+  .video-wrapper__ignore_itelios {
+    position: relative;
+
+    video {
+      width: 100%;
+      margin-bottom: -5px;
+    }
+
+    .overlay {
+      bottom: 0; top: 0; left: 0; right: 0;
+
+      > *, a.scroller {
+        cursor: pointer;
+        position: absolute;
+      }
+
+      .controls {
+        font-size: 10px;
+        line-height: 20px;
+        letter-spacing: 4px;
+        top: 20px; right: 2%;
+
+        > span {
+          color: #fff;
+          margin-left: 10px;
+          display: inline-block;
+        }
+
+        a > span {
+          letter-spacing: 5px;
+        }
+      }
+
+      .arrow {
+        bottom: 30px;
+        width: 30px; height: 30px;
+        left: 50%; margin-left: -15px;
+        padding-top: 100px;
+        background: url(images/#{$ID}/scroller.png?$staticlink$) no-repeat bottom center;
+
+        > a {
+          display: block;
+          top: 0; bottom: 0; left: 0; right: 0;
+        }
+      }
+    }
+  }
+
+}

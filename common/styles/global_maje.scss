@@ -1,0 +1,313 @@
+#browser-check { display: none!important; }
+
+/* Hide body in footer when using buggy popin */
+#QuickViewDialog > #wrapper.pt_error {
+  display: none!important;
+}
+
+// FIX ITELIOS HOMEPAGE - BEGIN
+.homePage .row {
+  display: block;
+  width: auto!important;
+}
+// FIX ITELIOS HOMEPAGE - END
+
+##{$ID}, .kr_content_wrapper {
+  /* SEE-MORE BUTTON -- see see-more.js */
+  .button--see-more {
+    @media only screen and (max-width:1023px) {
+      text-align: center;
+    }
+  }
+
+  a:hover, a:focus { text-decoration: none; }
+
+  a.see-more {
+    display: inline-block;
+    position: relative;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none!important;
+
+    line-height: 20px;
+    padding-left: 30px;
+
+    &, &:before {
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
+
+    &:before {
+      content: "";
+      z-index: 10;
+      width: 20px; height: 10px;
+      position: absolute; left: 0; top: 5px;
+      background: url(images/#{$ID}/see-more--chevron.png?$staticlink$) center center no-repeat;
+      background-size: contain;
+
+      -webkit-transition: all 0.3s ease;
+
+      transition: all 0.3s ease;
+    }
+
+    &.on:before {
+      -webkit-transform: rotate(-180deg);
+              transform: rotate(-180deg);
+    }
+
+    &:not(.on) .more--less {
+      display: none;
+    }
+    &.on .more--more {
+      display: none;
+    }
+
+  }
+
+  /* New CTA - Inspired by Raoul */
+  .new-cta {
+    color: #333;
+    margin: 0 auto;
+    padding: 0 10px;
+    font-size: 13px;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 2px;
+      margin: 0 -10px 5px;
+      background: #000000;
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transition: all 0.3s ease;
+              transition: all 0.3s ease;
+    }
+
+    &:not(.no-animation):hover::before {
+      -webkit-transform: scale(0,1);
+              transform: scale(0,1);
+    }
+  }
+
+  .new-cta-v2 {
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    line-height: 16px;
+    border: 1px solid #000;
+    padding: 10px 60px;
+    letter-spacing: 1.5px;
+
+    transition: all 0.3s ease;
+
+    @media (max-width: 480px)  {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &:hover {
+      color: #C9BAA2!important;
+      border-color: #C9BAA2;
+      text-decoration: none!important;;
+    }
+  }
+
+  .new-cta-v3 {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    transition: color .6s;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0; height: 1px;
+      background: #000;
+      max-width: 99.5%;
+      left: 0; bottom: 0;
+      z-index: 1;
+      transition: width .2s ease-out;
+    }
+
+    &:hover {
+      color: #000;
+
+    	&:after {
+		    width: 100%;
+		  }
+		}
+  }
+
+  .with-animated-line {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    overflow: visible;
+
+    &::before {
+      content: " ";
+      display: block;
+      position: absolute;
+      width: 15px; height: 1px;
+      left: -20px; top: 50%;
+      background-color: #111;
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+
+      body.is-mobile & {
+        display: none;
+      }
+    }
+
+    &:hover {
+      &::before {
+        -webkit-transform: scale(0, 1);
+                transform: scale(0, 1);
+      }
+    }
+  }
+
+  /* Underline using :after; */
+  .text-under-line-magic {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+  }
+  .text-under-line-magic:hover:after {
+    content: "";
+    display: block;
+    border-top: 1px solid #000;
+    position: absolute;
+    bottom: 2px; left: 0; right: 0;
+  }
+
+  /* Effect text-striked magic */
+  .text-striked-magic {
+    display: inline-block;
+    position: relative;
+  }
+  .text-striked-magic:before {
+    content: "";
+    display: block;
+    position: absolute;
+    margin-right: 100%;
+    border-top: 1px solid #fff;
+    left: 0; right: 0; top: 50%;
+    -webkit-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+  }
+  .text-striked-magic.active:before {
+    margin-right: 0;
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+  }
+
+  /* VIDEO - HMTL5 */
+  video.video-responsive {
+    max-width: 100%;
+  }
+  .video-wrapper,
+  .video-wrapper__ignore_itelios {
+    position: relative;
+
+    video {
+      width: 100%;
+      margin-bottom: -5px;
+    }
+
+    .overlay {
+      bottom: 0; top: 0; left: 0; right: 0;
+
+      > *, a.scroller {
+        cursor: pointer;
+        position: absolute;
+      }
+
+      .controls {
+        font-size: 10px;
+        line-height: 20px;
+        letter-spacing: 4px;
+        top: 20px; right: 2%;
+
+        > span {
+          color: #fff;
+          margin-left: 10px;
+          display: inline-block;
+        }
+
+        a > span {
+          letter-spacing: 5px;
+        }
+      }
+
+      .arrow {
+        bottom: 30px;
+        width: 30px; height: 30px;
+        left: 50%; margin-left: -15px;
+        padding-top: 100px;
+        background: url(images/#{$ID}/scroller.png?$staticlink$) no-repeat bottom center;
+
+        > a {
+          display: block;
+          top: 0; bottom: 0; left: 0; right: 0;
+        }
+      }
+    }
+  }
+
+  /* CTA */
+  .cta {
+    text-align: center;
+  }
+  .cta > div {
+    text-align: center;
+    padding: 6px 10px 0;
+    display: inline-block;
+    border-top: 2px solid #000;
+  }
+  .cta.cta-alternative > div {
+    padding-left: 0;
+    padding-right: 0;
+    border-top: none;
+    position: relative;
+  }
+  .cta.cta-alternative > div::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: #000;
+    top: 0; left: 8%; width: 84%;
+  }
+  .cta a {
+    color: #333;
+    font-size: 13px;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+
+  /* LINK TO BACK */
+  a.link-to-back {
+    text-align: left;
+    font-size: 12px;
+    padding-left: 15px;
+    position: relative;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: underline!important;
+    background: url(images/#{$ID}/l_arrow.png?$staticlink$) no-repeat center left;
+  }
+
+}

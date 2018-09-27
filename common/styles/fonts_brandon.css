@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'Brandon';
+  src: url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_blk.eot');
+  src: local('☺'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_blk.woff') format('woff'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_blk.ttf') format('truetype'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_blk.svg') format('svg');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_blk_it.eot');
+  src: local('☺'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_blk_it.woff') format('woff'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_blk_it.ttf') format('truetype'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_blk_it.svg') format('svg');
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_bld.eot');
+  src: local('☺'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_bld.woff') format('woff'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_bld.ttf') format('truetype'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_bld.svg') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_bld_it.eot');
+  src: local('☺'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_bld_it.woff') format('woff'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_bld_it.ttf') format('truetype'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_bld_it.svg') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_med.eot');
+  src: local('☺'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_med.woff') format('woff'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_med.ttf') format('truetype'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_med.svg') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_med_it.eot');
+  src: local('☺'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_med_it.woff') format('woff'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_med_it.ttf') format('truetype'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_med_it.svg') format('svg');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_reg.eot');
+  src: local('☺'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_reg.woff') format('woff'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_reg.ttf') format('truetype'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_reg.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_reg_it.eot');
+  src: local('☺'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_reg_it.woff') format('woff'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_reg_it.ttf') format('truetype'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_reg_it.svg') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_light.eot');
+  src: local('☺'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_light.woff') format('woff'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_light.ttf') format('truetype'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_light.svg') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_light_it.eot');
+  src: local('☺'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_light_it.woff') format('woff'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_light_it.ttf') format('truetype'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_light_it.svg') format('svg');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_thin.eot');
+  src: local('☺'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_thin.woff') format('woff'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_thin.ttf') format('truetype'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_thin.svg') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_thin_it.eot');
+  src: local('☺'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_thin_it.woff') format('woff'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_thin_it.ttf') format('truetype'), url('//majenews.com/DEDICATED/common/fonts/brandon/Brandon_thin_it.svg') format('svg');
+  font-weight: 200;
+  font-style: italic;
+}

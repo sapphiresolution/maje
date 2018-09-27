@@ -1,0 +1,25 @@
+{
+  "name": "kaamandroffler/kr-dp-base",
+  "require": {
+    "leafo/scssphp": "^0.7.5",
+    "matthiasmullie/minify": "^1.3",
+    "twbs/bootstrap-sass": "^3.3"
+  },
+  "scripts": {
+    "convert-images": [
+      "bash common/bash/convert-images.sh"
+    ],
+    "post-install-cmd": [
+      "bash common/bash/generate_html.sh"
+    ],
+    "post-create-project-cmd": [
+      "echo Next Step: EDIT index.php and run init_heroku.sh"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Gabriel Kaam",
+      "email": "gabriel@knr.paris"
+    }
+  ]
+}

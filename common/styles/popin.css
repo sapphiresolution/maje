@@ -1,0 +1,45 @@
+/* BEGIN POPIN */
+.quickview .pdp-main .product-name .productName,
+.quickview .pdp-main .product-name .productSubname,
+.quickview .pdp-main .toDetails {
+  font-family: Brandon,'agBook',Arial,sans-serif;
+}
+.quickview .pdp-main .product-name .productSubname {
+  margin-top: .5em;
+}
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.quickview.ui-draggable,
+.quickview .pdp-main {
+  padding: 0!important;
+}
+.quickview .pdp-main .product-col-1 {
+  margin-right: 35px;
+}
+.quickview .pdp-main .product-col-2 {
+  margin-top: 30px!important;
+}
+.quickview .sizeguide,
+.quickview span.label {
+  display: none!important;
+}
+.quickview .pdp-main .productlargeimgdata {
+  margin-bottom: -5px!important;
+}
+.quickview .pdp-main .attribute {
+  padding-top: 10px;
+}
+.quickview .pdp-main .attribute + .attribute {
+  margin-top: 0;
+  padding-bottom: 0;
+}
+.quickview .pdp-main .product-add-to-cart .inventory {
+  margin-bottom: 15px
+}
+.quickview .pdp-main .product-add-to-cart .product-price {
+  padding-bottom: 0;
+}
+#pdpMain .product-col-2.product-detail .unauth-add-to-wishlist,
+#pdpMain .product-col-2.product-detail .add-to-wishlist {
+  padding-top: 10px;
+  background-position-y: 7px;
+}
+/* END POPIN */

@@ -1,0 +1,1980 @@
+</div>
+</div>
+<div class="html-slot-container">
+  
+    
+      <style>
+  
+@media only screen and (max-width:767px){
+  div.layer_2_images .right,
+  div.layer_2_images_silhouette div.silhouette {
+    margin: 0px 0;
+    padding: 0;
+  }
+  
+  div.layer_2_images div,
+  div.layer_2_images_silhouette > div {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+  
+  div.layer_2_images,
+  div.layer_2_images_silhouette {
+    display: block;
+    width: 100%;
+  }
+
+#wrapper.pt_storefront #main {
+padding: 0;
+}
+
+}
+  
+  
+  </style>  
+    
+  
+</div> 
+  
+  
+   
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="layer_5_products">
+  
+  
+  
+    
+  
+</div>
+ 
+  
+  
+   
+
+  
+  
+   
+
+  
+  
+   
+
+  
+
+  
+  
+</div>
+
+
+<!-- Google Analytics Homepage -->
+<script type="text/javascript">
+  $(document).ready(function() {
+    
+    Sandro.home.bindEvents();
+    
+    // Banniere principale
+    $('.homePageSlider .swiper-wrapper').on('click', function(e) {
+    
+      var strImgSrc = $(this).find('img').attr('src') ? $(this).find('img').attr('src') : '';   
+      
+      var start = strImgSrc.lastIndexOf('/');
+      var end = strImgSrc.lastIndexOf('.jpg');
+      
+      var imgName = strImgSrc.substring(start+1, end+4);
+      
+      dataLayer.push(
+        {
+          'event': 'GAevent',
+          'eventCategory': 'SliderHomepage',
+          'eventAction': 'Clic',
+          'eventLabel': imgName
+        }
+      );
+    });
+    
+    // D'autres Bannieres
+    $('.swiper-wrapper').not('.homePageSlider .swiper-wrapper').on('click', function(e) {
+    
+      var strImgSrc = $(this).find('img').attr('src') ? $(this).find('img').attr('src') : '';   
+      
+      var start = strImgSrc.lastIndexOf('/');
+      var end = strImgSrc.lastIndexOf('.jpg');
+      
+      var imgName = strImgSrc.substring(start+1, end+4);
+      
+      dataLayer.push(
+        {
+          'event': 'GAevent',
+          'eventCategory': 'Slot1Homepage',
+          'eventAction': 'Clic',
+          'eventLabel': imgName
+        }
+      );
+    });
+    
+    // Images carrées
+    $('.layer_2_images a').on('click', function(e) {
+      var strImgSrc = $(this).find('img').attr('src') ? $(this).find('img').attr('src') : '';
+
+      var start = strImgSrc.lastIndexOf('/');
+      var end = strImgSrc.lastIndexOf('.jpg');
+      
+      var imgName = strImgSrc.substring(start+1, end+4);
+      
+      dataLayer.push(
+        {
+          'event': 'GAevent',
+          'eventCategory': 'Slot2Homepage',
+          'eventAction': 'Clic',
+          'eventLabel': imgName
+        }
+      );
+    });
+    
+    // Bloc à gauche et à droite du slot silhouette
+    $('.layer_2_images_silhouette .left a, .layer_2_images_silhouette .right a').on('click', function(e) {
+      if ($(this).closest('.layer_5_products').length > 0) return;
+      var strImgSrc = $(this).find('img').attr('src') ? $(this).find('img').attr('src') : '';
+      
+      var start = strImgSrc.lastIndexOf('/');
+      var end = strImgSrc.lastIndexOf('.jpg');
+      
+      var imgName = strImgSrc.substring(start+1, end+4);
+      
+      dataLayer.push(
+        {
+          'event': 'GAevent',
+          'eventCategory': 'Slot2Homepage',
+          'eventAction': 'Clic',
+          'eventLabel': imgName
+        }
+      );
+    });
+    
+    // Lien vers les produits du slot silhouette
+    $('.layer_2_images_silhouette .silhouette a').on('click', function(e) {
+      var position = $(this).data('position') ? $(this).data('position') : '';
+
+      dataLayer.push(
+        {
+            'event': 'GAevent',
+            'eventCategory': 'clickOnProduct Homepage',
+            'eventAction': 'pushProduct',
+            //'eventLabel': position
+            'eventLabel': $(this).parent().attr('data-productid')
+        }
+      );
+    });
+    
+    // Lien "Voir categorie" du slot "Weekend favorites"
+    $('.layer_3_images > a').on('click', function(e) {
+      var strImgSrc = $(this).text() ? $(this).text() : '';
+      var start = strImgSrc.lastIndexOf('/');
+      var end = strImgSrc.lastIndexOf('.jpg');
+      
+      var imgName = strImgSrc.substring(start+1, end+4);
+
+      
+      dataLayer.push(
+        {
+          'event': 'GAevent',
+          'eventCategory': 'clickOnList Homepage',
+          'eventAction': 'Clic',
+          'eventLabel': imgName
+        }
+      );
+    });
+    
+    // Remove the default tag on the product tile
+    $('.layer_5_products .swiper-containerPdt .product-tile a').each(function() {
+      $(this).attr('onclick', '');
+    });
+  });
+</script>
+
+  
+
+
+      
+
+
+<div id="browser-check">
+<noscript>
+  <div class="browser-compatibility-alert">
+    <p class="browser-error">Your browser's Javascript functionality is turned off. Please turn it on so that you can experience the full capabilities of this site.</p>    
+  </div>
+</noscript>
+</div>
+
+    </div>
+    
+ 
+
+  
+  
+
+  
+  
+
+    
+      
+
+
+<script type='text/javascript'>
+
+  var device = 'desktop';    
+  if( navigator.userAgent.match( /(android|iphone|ipad|blackberry|symbian|symbianos|symbos| netfront|model-orange|javaplatform|iemobile|windows phone|samsung|htc| opera mobile|opera mobi|opera mini|presto|huawei|blazer|bolt|doris|fennec|gobrowser|iris|maemo browser|mib|cldc| minimo|semc-browser|skyﬁre|teashark|teleca|uzard|uzardweb|meego|nokia|bb10|playbook)/gi ) ) 
+  {          
+    if( ( screen.width >= 767 ) || navigator.userAgent.match( /ipad/gi ) )
+    {            
+      device = 'tablet';
+    } 
+    else 
+    {            
+      device = 'mobile';
+    }    
+  } 
+  else 
+  {        
+    device = 'desktop';    
+  } 
+  
+  var idzCustomData = JSON.parse( '{"productPrice":"","productStatus":"false","pageType":"Homme","pageCategory":"Category","cartAmount":"0","userProvenance":"","customerFirstName":"","customerLastName":"","customerPhoneNumber":"","customerEmail":""}' );
+  idzCustomData.device = device;
+
+</script>
+
+
+
+
+<script type="text/javascript">
+  (function() {
+    var idz = document.createElement('script'); idz.type = 'text/javascript'; idz.async = true;
+    idz.src = document.location.protocol + "//halc.iadvize.com/chat_init.js?sid=2213&lang=fr";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(idz, s);
+  })();
+</script>
+
+
+    
+
+  
+
+  
+  
+
+
+<script type="text/javascript">
+  (function() {
+    var idz = document.createElement('script'); idz.type = 'text/javascript'; idz.async = true;
+    idz.src = document.location.protocol + "//halc.iadvize.com/chat_init.js?sid=2213&lang=fr";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(idz, s);
+  })();
+</script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+<div id="bottom" role="contentinfo">
+  <footer>
+    
+    
+    
+   
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="reinsurance-container">
+    
+      
+        
+        <div class="footer-reinsurance">
+          
+            <a href="/fr/livraison/Livraison.html">
+          
+            
+            
+              
+            
+            <p>
+              <span class="reinsurance-element">
+                <span class="reinsurance-img"><img src="/on/demandware.static/-/Library-Sites-Sandro-Shared/default/dwa6491692/Footer/colis-x2.png"/></span>
+                Livraison et retour<br />gratuits
+              </span>
+            </p>
+          
+            </a>
+          
+        </div>
+            
+    
+      
+        
+        <div class="footer-reinsurance">
+          
+            <a href="/fr/faq-17/faq.html">
+          
+            
+            
+              
+            
+            <p>
+              <span class="reinsurance-element">
+                <span class="reinsurance-img"><img src="/on/demandware.static/-/Library-Sites-Sandro-Shared/default/dw92f97b2e/Footer/securise-x2.png"/></span>
+                Paiement sécurisé
+              </span>
+            </p>
+          
+            </a>
+          
+        </div>
+            
+    
+      
+        
+        <div class="footer-reinsurance">
+          
+            <a href="/fr/detail-commande">
+          
+            
+            
+              
+            
+            <p>
+              <span class="reinsurance-element">
+                <span class="reinsurance-img"><img src="/on/demandware.static/-/Library-Sites-Sandro-Shared/default/dw6ff425d6/Footer/livraison-x2.png"/></span>
+                Suivi de commande
+              </span>
+            </p>
+          
+            </a>
+          
+        </div>
+            
+    
+      
+        
+        <div class="footer-reinsurance">
+          
+            <a href="/fr/nous-contacter">
+          
+            
+            
+              
+            
+            <p>
+              <span class="reinsurance-element">
+                <span class="reinsurance-img"><img src="/on/demandware.static/-/Library-Sites-Sandro-Shared/default/dw0f4ce6ed/Footer/sc-x2.png"/></span>
+                Service Client<br />0801 800 333 (N° Gratuit)
+              </span>
+            </p>
+          
+            </a>
+          
+        </div>
+            
+    
+  </div>
+ 
+  
+
+    
+    
+<div class="newsletter-container">
+  <span class="liste-header">Newsletter</span>
+  <p class="text">Inscrivez-vous à notre newsletter pour suivre notre actualité <br> et bénéficiez de nos offres privées</p>
+
+  <form id="newsletterinscription-form"
+  data-msgdone="Votre inscription &agrave; la newsletter a &eacute;t&eacute; prise en compte."
+  data-msgalreadydone="Vous &ecirc;tes d&eacute;j&agrave; inscrit &agrave; la newsletter."
+  data-msgerror=""
+  data-msgcomerror="">
+    <div class="flip-main">
+      <div class="flip-container">
+        <div class="input-container">
+          <input type="email" id="nlemail" name="nlemail" class="newsInput capSaisieFieldMail required" placeholder="Votre email"  />
+          <input type="submit" id="newsletterinscription-verifyBtn" value="→"/>
+          
+        </div>
+        <div class="newsletterinscription-subscribe">
+          <a href="/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/SuscribeToNewsletter-Suscribe?salutation=2" class="woman">Femme</a>
+          <a href="/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/SuscribeToNewsletter-Suscribe?salutation=1" class="man">Homme</a>
+        </div>
+        <div class="news-inscription-result">
+          
+          <div class="newsletter-inner-result">
+            <span class="newsletter-form-message"></span>
+            
+            
+              <a href="/fr/register">Cr&eacute;ez votre compte</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+  
+  <div class="sharing-container">
+    <div class="footer-logo share-column">
+      <span class="icon-sandro-logo-simple"></span>
+    </div>
+    <div class="footer-social-icon share-column">
+      
+        <ul class="sharing">
+          <li><a target="_blank" href="http://instagram.com/sandroparis" class="instagram">instagram</a>Woman</li>
+          <li><a target="_blank" href="https://www.facebook.com/sandrofrance" class="facebook">facebook</a></li>
+          <li><a target="_blank" href="https://twitter.com/SandroParis" class="tweeter">tweeter</a></li>
+          <li><a target="_blank" href="https://pinterest.com/sandroofficial/" class="pinterest">pinterest</a></li>
+          <li><a target="_blank" href="https://www.instagram.com/sandrohomme/?hl=fr" class="instagram">instagram</a>Man</li>
+        </ul>
+      
+    </div>
+    <div class="footer-country-select share-column">
+      
+      
+        <div class="select-border">
+          <div class="select-container">
+            <select class="changeCountryContent">
+              <option>
+                
+                  Pays/R&eacute;gion  
+                
+              </option>
+              
+                
+                
+                  <option value="https://de.sandro-paris.com">Allemagne</option>
+                
+              
+                
+                
+                  <option value="https://eu.sandro-paris.com/">Autriche</option>
+                
+              
+                
+                
+                  <option value="https://eu.sandro-paris.com/">Belgique</option>
+                
+              
+                
+                
+                  <option value="https://www.sandro-paris.cn/">Chine</option>
+                
+              
+                
+                
+                  <option value="https://es.sandro-paris.com">Espagne</option>
+                
+              
+                
+                
+                  <option value="https://us.sandro-paris.com">&Eacute;tats-Unis</option>
+                
+              
+                
+                
+                  <option value="https://uk.sandro-paris.com">Grande-Bretagne</option>
+                
+              
+                
+                
+                  <option value="https://eu.sandro-paris.com/">Gr&egrave;ce</option>
+                
+              
+                
+                
+                  <option value="https://www.sandro-paris.com.hk">Hong Kong/Macau</option>
+                
+              
+                
+                
+                  <option value="https://eu.sandro-paris.com/">Irelande</option>
+                
+              
+                
+                
+                  <option value="https://it.sandro-paris.com">Italie</option>
+                
+              
+                
+                
+                  <option value="https://eu.sandro-paris.com/">Luxembourg</option>
+                
+              
+                
+                
+                  <option value="https://eu.sandro-paris.com/">Pays-Bas</option>
+                
+              
+                
+                
+                  <option value="https://eu.sandro-paris.com/">Portugal</option>
+                
+              
+                
+                
+                  <option value="https://www.sandro-paris.com.sg">Singapore</option>
+                
+              
+                
+                
+                  <option value="https://ch.sandro-paris.com">Suisse</option>
+                
+              
+                
+                
+                  <option value="https://www.sandro-paris.com.tw">Taiwan</option>
+                
+                
+            </select> 
+          </div>
+        </div>
+      
+    </div>
+  </div>
+  
+  <div class="list-container">
+    
+      <div class="list-column">
+        <span class="liste-header-container toggleMe" data-parentclass="list-container">
+          <span class="liste-header">Service Client</span>
+        </span>
+        
+        <ul>
+          
+            
+              
+              <li>
+                
+                  <a href="/fr/toutes-les-tailles/all_size_guides.html">Guide des Tailles</a>
+                
+              </li>
+            
+              
+              <li>
+                
+                  <a href="/fr/services/e-reservation.html">E-réservation</a>
+                
+              </li>
+            
+              
+              <li>
+                
+                  <a href="/fr/p01/gift-card.html">Carte Cadeau</a>
+                
+              </li>
+            
+              
+              <li>
+                
+                  <a href="/fr/aide-et-faq/faqs.html">FAQ</a>
+                
+              </li>
+            
+              
+              <li>
+                
+                  <a href="/fr/nous-contacter">Nous Contacter</a>
+                
+              </li>
+            
+              
+              <li>
+                
+                  <a href="/fr/detail-commande">Suivi de Commande </a>
+                
+              </li>
+            
+          
+        </ul>
+      </div>
+    
+      <div class="list-column">
+        <span class="liste-header-container toggleMe" data-parentclass="list-container">
+          <span class="liste-header">Collection Femme</span>
+        </span>
+        
+        <ul>
+          
+            
+              
+              <li>
+                
+                  <a href="/fr/femme/collection-ete-2/">Collection Été</a>
+                
+              </li>
+            
+              
+              <li>
+                
+                  <a href="/fr/femme/robes/">Robes</a>
+                
+              </li>
+            
+              
+              <li>
+                
+                  <a href="/fr/femme/tops-et-chemises/">Tops & Chemises</a>
+                
+              </li>
+            
+          
+        </ul>
+      </div>
+    
+      <div class="list-column">
+        <span class="liste-header-container toggleMe" data-parentclass="list-container">
+          <span class="liste-header">Collection Homme</span>
+        </span>
+        
+        <ul>
+          
+            
+              
+              <li>
+                
+                  <a href="/fr/homme/collection-ete/">Collection Été</a>
+                
+              </li>
+            
+              
+              <li>
+                
+                  <a href="/fr/homme/blousons-et-vestes/">Blousons & Vestes</a>
+                
+              </li>
+            
+              
+              <li>
+                
+                  <a href="/fr/homme/t-shirts-et-polos/">T-shirts & Polos</a>
+                
+              </li>
+            
+          
+        </ul>
+      </div>
+    
+      <div class="list-column">
+        <span class="liste-header-container toggleMe" data-parentclass="list-container">
+          <span class="liste-header">Sandro Paris</span>
+        </span>
+        
+        <ul>
+          
+            
+              
+              <li>
+                
+                  <a href="/fr/boutiques">Nos Boutiques </a>
+                
+              </li>
+            
+              
+              <li>
+                
+                  <a href="http://www.smcp.com/fr/offres/">Carrières </a>
+                
+              </li>
+            
+              
+              <li>
+                
+                  <a href="/fr/ss18/SS18_campagne.html">Campagne SS18</a>
+                
+              </li>
+            
+          
+        </ul>
+      </div>
+    
+      <div class="list-column">
+        <span class="liste-header-container toggleMe" data-parentclass="list-container">
+          <span class="liste-header">Mentions L&eacute;gales</span>
+        </span>
+        
+        <ul>
+          
+            
+              
+              <li>
+                
+                  <a href="/fr/conditions-generales-de-vente/terms.html">CGV </a>
+                
+              </li>
+            
+              
+              <li>
+                
+                  <a href="/fr/mentions-legales/legal_notes.html">Mentions Légales </a>
+                
+              </li>
+            
+          
+        </ul>
+      </div>
+    
+  </div>
+  
+</footer>
+
+
+  <script type="text/javascript">
+
+var app = (function(app){
+app.constants = {"AVAIL_STATUS_IN_STOCK":"IN_STOCK","AVAIL_STATUS_PREORDER":"PREORDER","AVAIL_STATUS_BACKORDER":"BACKORDER","AVAIL_STATUS_NOT_AVAILABLE":"NOT_AVAILABLE","PI_METHOD_GIFT_CERTIFICATE":"GIFT_CERTIFICATE","GUEST_REGISTER_POPIN_DELAY_DESKTOP":5000,"GUEST_REGISTER_POPIN_DELAY_MOBILE":2000,"REDIRECT_CUSTOMER_URL":"https://fr.sandro-paris.com/fr/femme/","NOTAUTHCOUNTRIES":"{\n \"CN\" : \"CHN\",\n \"GR\" : \"GR\"\n }","DEFAULTLLANGUAGECODE":"FR","DEFAULTCOUNTRYCODE":"FR","CROSSLOG_CLIENT_ID":"d60ca40e-8b61-4380-918b-022e1b1511c4","CROSSLOG_COMMANDE_ID":"","CROSSLOG_DEFAULT_ADDRESS":"49 Rue Étienne Marcel, Paris","CROSSLOG_IFRAME_URL":"//wscartography.crossdesk.com/Map.aspx","CAPADRESSE_ENABLED":true,"GB_ZIP_TO_UPPER":"false","CAPVERIF_ENABLED":true,"CAPVERIF_POSTCODEFAIL":["7","8","G"]};
+app.resources = {"CLOSE":"Fermer","SHIP_QualifiesFor":"shipment.qualifiesfor","CC_LOAD_ERROR":"billing.creditcardloaderror","REG_ADDR_ERROR":"global.couldntloadaddress","BONUS_PRODUCT":"product.bonusproduct","BONUS_PRODUCTS":"product.bonusproducts","SELECT_BONUS_PRODUCTS":"product.selectbonusproducts","SELECT_BONUS_PRODUCT":"product.selectbonusproduct","BONUS_PRODUCT_MAX":"product.bonusproductsmax","SIMPLE_SEARCH":"Rechercher","SUBSCRIBE_EMAIL_DEFAULT":"Email Address","CURRENCY_SYMBOL":"€","MISSINGVAL":"global.missingval","SERVER_ERROR":"global.servererror","MISSING_LIB":"global.missinglib","BAD_RESPONSE":"global.badresponse","INVALID_BIRTHDATE":"Date de naissance non valide","INVALID_NOUN":"Chiffres/Caractères non autorisés","INVALID_PHONE":"Veuillez respecter le format demandé","INVALID_GIFT_MESSAGE":"Veuillez saisir votre message personnalisé","INVALID_EMAIL":"L'adresse email est invalide.","INVALID_CAPEMAIL":"<span class=\"maje-mobile-only\">L'email renseigné n'existe pas. </span>Renseignez un email valide.","INVALID_ZIP":"Le code postal est invalide","EXCLUDED_ZIP":"Cette destination n'est pas livrée","INVALID_ADDRESS":"Adresse invalide","INVALID_STREETNB":"Numéro invalide (5 caractères max)","INVALID_MESSAGE":"Chiffres/Caractères non autorisés","REMOVE":"Supprimer","QTY":"Qté","EMPTY_IMG_ALT":"Supprimer","COMPARE_BUTTON_LABEL":"productcomparewidget.compareitemsbutton","COMPARE_CONFIRMATION":"productcomparewidget.maxproducts","COMPARE_REMOVE_FAIL":"productcomparewidget.removefail","COMPARE_ADD_FAIL":"productcomparewidget.addfail","ADD_TO_CART_FAIL":"cart.unableToAdd","REGISTRY_SEARCH_ADVANCED_CLOSE":"giftregistry.closeadvanced","GIFT_CERT_INVALID":"billing.giftcertinvalid","GIFT_CERT_BALANCE":"billing.giftcertbalance","GIFT_CERT_AMOUNT_INVALID":"giftcert.amountvalueerror","GIFT_CERT_MISSING":"billing.giftcertidmissing","COUPON_CODE_MISSING":"Merci de renseigner un code privilège","COOKIES_DISABLED":"browsertoolscheck.cookies","BML_AGREE_TO_TERMS":"bml.termserror","CHAR_LIMIT_MSG":"Il vous reste {0} caractères sur {1}","LINE_LIMIT_MSG":"Il vous reste {0} lignes sur {1} (60 caractères par ligne)","CONFIRM_DELETE":"Voulez-vous supprimer cette {0} ?","TITLE_GIFTREGISTRY":"gift registry","TITLE_ADDRESS":"address","TITLE_CREDITCARD":"carte de crédit","SERVER_CONNECTION_ERROR":"Server connection failed!","IN_STOCK_DATE":"global.inStockDate","INIFINITESCROLL":"paginginformation.infinite-scroll","COUNTRY":"Pays/Région","CITY":"Ville","SEARCH":"à proximité de chez vous","TITLEFEATURE":"rechercher par :","DAYS":"Dimanche|Lundi|Mardi|Mercredi|Jeudi|Vendredi|Samedi","HOURS":"Horaires","NOSTORE":"Il n'y a pas de magasin dans cette zone.","ITINERAIRE":"Itineraire","INDICATEPLACE":"Indiquez un lieu","MAP":"Carte","STORE":"boutique","STORES":"Boutiques","STORE_MEN":"Boutique homme","STORE_WOMEN":"Boutique femme","IN_COUNTRY":"en","IN_CITY":"&agrave;","STORES_IN_THE_WORLD":"boutiques dans le monde","GENDER_MAN":"Homme","GENDER_WOMAN":"Femme","GENDER_MIXED":"Mixte","GENDER_ALL":"Tous","LOCATIONSEARCHINVALID":"La valeur saisie est invalide.","SIZE":"Taille","NUMBER_ERROR":"Veuillez saisir un numéro valide","EMAIL_ERROR":"Veuillez saisir un email valide.","EMAIL_CONFIRM_ERROR":"l'email ne correspond pas","VALIDATION_REQUIRED":"Ce champ est requis","VALIDATION_EMAIL":"Merci de renseigner un email valide","CONFIRM_DISPO_DEMANDE":"Merci, nous avons bien pris en compte votre demande.","LASTSEENMOBILE":"Produit vus","LASTSEEN":"Derniers articles consultés","STORELOCATOR_INFORMATION_NOT_AVAILABLE":"Information non disponible. Veuillez contacter votre boutique.","SELECT_THIS_STORE":"Choisir cette boutique","STORE_SELECTED":"Sélectionnée","PLEASE_CHOOSE_A_STORE":"Veuillez sélectionner une boutique","SELECT_THIS_ADDRESS":"Choisir cette adresse","ADDRESS_SELECTED":"Adresse sélectionnée","FIND_A_STORE_NEAR":"Code postal ou ville ","CHOOSE_A_STORE":"Choisissez une boutique","SHIPPING_ADDRESS":"Adresse de livraison","CROSSLOG_ERROR_MESSAGE":"Veuillez sélectionner un point de retrait","GEOLOCATE":"Géolocalisez-moi","POSITIVE_NUMBER_NEEDED":"Veuillez saisir un nombre entier positif.","LESS_THAN_OR_EQUAL":"Veuillez saisir une valeur inférieure ou égale &agrave; {0}.","GREATER_THAN_OR_EQUAL":"Veuillez saisir une valeur supérieure ou égale &agrave; {0}.","EMAIL_NO_MATCH":"Les adresses email ne sont pas identiques","PASSWORD_NO_MATCH":"Veuillez vérifier que les champs sont identiques","PASSWORD_LENGTH":"Veuillez saisir un mot de passe de plus de 8 caractères.","SPLASH_NL_GENDER":"Champs requis","SPLASH_NL_MAIL":"Veuillez renseigner une adresse mail","SPLASH_NL_SUCCESS":"Votre inscription à la newsletter à bien été prise en compte","CHECKOUT_PAYMENT_CARD_NUMBER":"Numéro de carte invalide","CHECKOUT_PAYMENT_DATE_EXPIRED":"Date d'expiration invalide","CHECKOUT_PAYMENT_CVN":"Seuls les numéros sont autorisés","CHECKOUT_ESTIMATEDTAX_NOTESTIMATED":"Not Estimated","TITLE_DIALOG":"capmail.dialog.title","TEXT_CHANGE":"capmail.dialog.textchange","TEXT_VALID":"capmail.dialog.textvalid","PRE_EMAIL":"capmail.dialog.textemail","TEXT_CAPMAIL":"capmail.dialog.text","REGEXP_DFLTPHONE":"^\\+?[ \\d]{8,}$","REGEXP_PHONE":"^(?:(?:\\+|00)1(\\s|-)?)?([2-9][0-8][0-9]|\\([2-9][0-8][0-9]\\))(\\1|\\.|\\s)([2-9]\\d{2})(\\1|\\.|\\s)\\d{4}(\\s*x\\d+)?$","REGEXP_CN_PHONE":"^\\d{11,12}$","REGEXP_DE_PHONE":"^((\\+|00)49 ?)?([(]{1}[0-9]{3,6}[)])?([0-9 .\\-/]{3,20})((x|ext|extension)[ ]?[0-9]{1,4})?$","REGEXP_GB_PHONE":"^(((\\+44 ?\\d{4}|\\(?0\\d{4}\\)?) ?\\d{3} ?\\d{3})|((\\+44 ?\\d{3}|\\(?0\\d{3}\\)?) ?\\d{3} ?\\d{4})|((\\+44 ?\\d{2}|\\(?0\\d{2}\\)?) ?\\d{4} ?\\d{4}))( ?\\#(\\d{4}|\\d{3}))?$","REGEXP_FR_PHONE":"^((\\+|00)33 ?|0)[1-7]( ?\\d{2}){4}$","REGEXP_PL_PHONE":"^((\\+|00)48 ?|0)[1-9]( ?\\d{2}){4}$","REGEXP_CZ_PHONE":"^(\\+(420|421))?((2\\d{8})|(3(1|2|5|[7-9])\\d{7})|(4(1|[6-9])\\d{7})|(5(1|[3-9])\\d{7})|(60[1-8]\\d{6})|((7(0|2|3|7|9)|(91))\\d{7}))$","REGEXP_IT_PHONE":"^((\\+|00)39 ?)?[03] ?(\\d( )?){9}$","REGEXP_ES_PHONE":"^((\\+|00)34 ?|0)[679]( ?\\d{2}){4}$","REGEXP_AT_PHONE":"^(\\+43 ?|0)[1-7|9]{1} ?( ?\\d){6,10}$","REGEXP_CH_PHONE":"^(?:0|(?:\\+|00)41 ?)\\d{2} ?\\d{3}(?: ?\\d{2}){2}$","REGEXP_BE_PHONE":"^((\\+|00)32 ?|0)(\\d ?\\d{3}|\\d{2} ?\\d{2})( ?\\d{2}){2}$","REGEXP_NL_PHONE":"(^\\+[0-9]{2}|^\\+[0-9]{2}|^\\(\\+[0-9]{2}\\)|^00[0-9]{2}|^0)([0-9]{9}$|[0-9\\- ]{10}$)","REGEXP_DK_PHONE":"^((\\(?\\+45\\)?)?)( ?\\d{2} ?\\d{2} ?\\d{2} ?\\d{2})$","REGEXP_SE_PHONE":"^(([+]\\d{2}[ ][1-9]\\d{0,2}[ ])|([0]\\d{1,3}[-]))((\\d{2}([ ]\\d{2}){2})|(\\d{3}([ ]\\d{3})*([ ]\\d{2})+))$","REGEXP_NO_PHONE":"^(0047|\\+47|47)?\\d{8}$","REGEXP_FI_PHONE":"^((([\\+][ ]{0,1})|([0]{2}[ -]{0,1}))([358]{3})([ -]{0,1})|([0]{1}))(([1-9]{1}[0-9]{0,1})([ -]{0,1})([0-9]{2,4})([ -]{0,1})([0-9]{2,4})([ -]{0,1}))([0-9]{0,3}){1}$","REGEXP_US_ZIP":"^\\d{5}-\\d{4}$|^\\d{5}$","REGEXP_CA_ZIP":"^[ABCEGHJKLMNPRSTVXY]{1}\\d{1}[A-Z]{1} *\\d{1}[A-Z]{1}\\d{1}$","REGEXP_GB_ZIP":"^GIR[ ]?0AA|((AB|AL|B|BA|BB|BD|BH|BL|BN|BR|BS|BT|CA|CB|CF|CH|CM|CO|CR|CT|CV|CW|DA|DD|DE|DG|DH|DL|DN|DT|DY|E|EC|EH|EN|EX|FK|FY|G|GL|GY|GU|HA|HD|HG|HP|HR|HS|HU|HX|IG|IM|IP|IV|JE|KA|KT|KW|KY|L|LA|LD|LE|LL|LN|LS|LU|M|ME|MK|ML|N|NE|NG|NN|NP|NR|NW|OL|OX|PA|PE|PH|PL|PO|PR|RG|RH|RM|S|SA|SE|SG|SK|SL|SM|SN|SO|SP|SR|SS|ST|SW|SY|TA|TD|TF|TN|TQ|TR|TS|TW|UB|W|WA|WC|WD|WF|WN|WR|WS|WV|YO|ZE)(\\d[\\dA-Z]?[ ]?\\d[ABD-HJLN-UW-Z]{2}))|BFPO[ ]?\\d{1,4}$","REGEXP_BR_ZIP":"^\\d{5}[\\-]?\\d{3}$","REGEXP_DE_ZIP":"^\\d{5}$","REGEXP_CN_ZIP":"^\\d{6}$","REGEXP_SG_ZIP":"^\\d{6}$","REGEXP_AU_ZIP":"^\\d{4}$","REGEXP_PL_ZIP":"^\\d{2}-\\d{3}$","REGEXP_CZ_ZIP":"^\\d{3} \\d{2}$","REGEXP_FR_ZIP":"^\\d{5}$","REGEXP_ES_ZIP":"^\\d{5}$","REGEXP_IT_ZIP":"^\\d{5}$","REGEXP_BE_ZIP":"^\\d{4}$","REGEXP_NL_ZIP":"^(NL-)?\\d{4} ?[A-Z]{2}$","REGEXP_CH_ZIP":"^\\d{4}$","REGEXP_DK_ZIP":"^\\d{4}$","REGEXP_SE_ZIP":"^\\d{3} \\d{2}$","REGEXP_NO_ZIP":"^\\d{4}$","REGEXP_FI_ZIP":"^\\d{5}$","REGEXP_AT_ZIP":"^\\d{4}$","REGEXP_US_EXCLUDED_ZIP":"","REGEXP_CA_EXCLUDED_ZIP":"","REGEXP_GB_EXCLUDED_ZIP":"(?!GY|JE)^","REGEXP_BR_EXCLUDED_ZIP":"","REGEXP_DE_EXCLUDED_ZIP":"","REGEXP_CN_EXCLUDED_ZIP":"","REGEXP_SG_EXCLUDED_ZIP":"","REGEXP_AU_EXCLUDED_ZIP":"","REGEXP_PL_EXCLUDED_ZIP":"","REGEXP_CZ_EXCLUDED_ZIP":"","REGEXP_FR_EXCLUDED_ZIP":"(?!971|972|973|974|975|976|977|978|986|987|988)^","REGEXP_ES_EXCLUDED_ZIP":"(?!35|38|07|51)^","REGEXP_IT_EXCLUDED_ZIP":"","REGEXP_BE_EXCLUDED_ZIP":"","REGEXP_NL_EXCLUDED_ZIP":"","REGEXP_CH_EXCLUDED_ZIP":"","REGEXP_DK_EXCLUDED_ZIP":"","REGEXP_SE_EXCLUDED_ZIP":"","REGEXP_NO_EXCLUDED_ZIP":"","REGEXP_FI_EXCLUDED_ZIP":"","REGEXP_AT_EXCLUDED_ZIP":"","REGEXP_NOUN":"^[A-Za-zÀ-ſ]+([-'\\s]*[A-Za-zÀ-ſ])*$","REGEXP_ADDRESS":"^[A-Za-z0-9À-ſ\\s&()\\-_\\]\\[':/.,]*$","REGEXP_MESSAGE":"^[A-Za-z0-9À-ſ\\s&()\\-_\\]\\[':/.,]*$","REGEXP_CITY":"^[A-Za-zÀ-ſ]+([-'\\s]*[A-Za-zÀ-ſ])*$","REGEXP_EMAIL":"^((?:(?:[^ \\t(\\)\\<\\>@,;\\:\\\\\\\"\\.\\[\\]\\r\\n]+)|(?:\\\"(?:(?:[^\\\"\\\\\\r\\n])|(?:\\\\.))*\\\"))(?:\\.(?:(?:[^ \\t(\\)\\<\\>@,;\\:\\\\\\\"\\.\\[\\]\\r\\n]+)|(?:\\\"(?:(?:[^\\\"\\\\\\r\\n])|(?:\\\\.))*\\\")))*)@((?:(?:[^ \\t(\\)\\<\\>@,;\\:\\\\\\\"\\.\\[\\]\\r\\n]+)|(?:\\[(?:(?:[^\\[\\]\\\\\\r\\n])|(?:\\\\.))*\\]))(?:\\.(?:(?:[^ \\t(\\)\\<\\>@,;\\:\\\\\\\"\\.\\[\\]\\r\\n]+)|(?:\\[(?:(?:[^\\[\\]\\\\\\r\\n])|(?:\\\\.))*\\])))*)$","REGEXP_PASSWORD":"^.{8,}$","REGEXP_STREETNB":"^[a-zA-Z0-9 ]{0,5}$","REGEXP_CREDITCARD":"^(\\d(?!\\*)|\\*){0,16}\\d$","REGEXP_VISA":"^(?:4[0-9]{12}(?:[0-9]{3})?)$","REGEXP_MASTER":"^(?:5[1-5][0-9]{14})$","REGEXP_AMEX":"^(?:3[47][0-9]{13})$","REGEXP_DISCOVER":"^(?:6(?:011|5[0-9][0-9])[0-9]{12})$","REGEXP_MAESTRO":"^([456][0-9]{11,18})$","REGEXP_DANKORT":"^(4[0-9]{3}|5019)[0-9]{12}$","IN_STOCK":"Disponible","QTY_IN_STOCK":"En stock","PREORDER":"Pre-commande","QTY_PREORDER":"Précommande","REMAIN_PREORDER":"Précommande","BACKORDER":"Back Order","QTY_BACKORDER":"","REMAIN_BACKORDER":"","NOT_AVAILABLE":"Epuisé","REMAIN_NOT_AVAILABLE":"Indisponible"};
+app.urls = {"abshomepage":"https://fr.sandro-paris.com/fr/homepage","appResources":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Resources-Load","pageInclude":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Page-Include","continueUrl":"https://fr.sandro-paris.com/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/RenderFooterSandro-Footer/C660122625","staticPath":"/on/demandware.static/Sites-Sandro-FR-Site/-/fr_FR/v1525679157524/","addGiftCert":"/fr/giftcertpurchase","minicartGC":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/GiftCert-ShowMiniCart","addProduct":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Cart-AddProduct","minicart":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Cart-MiniAddProduct","minicartUpdateSize":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/CartAjax-UpdateProductLineItem","cartShow":"/fr/panier","cartItemsForm":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/CartAjax-GetCartItemsFormHtml","giftRegAdd":"https://fr.sandro-paris.com/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Address-GetAddressDetails?addressID=","paymentsList":"https://fr.sandro-paris.com/fr/wallet","addressesList":"https://fr.sandro-paris.com/fr/mes-adresses","wishlistAddress":"https://fr.sandro-paris.com/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Wishlist-SetShippingAddress","deleteAddress":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Address-Delete","getProductUrl":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Product-Show","getBonusProducts":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Product-GetBonusProducts","addBonusProduct":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Cart-AddBonusProduct","getSetItem":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Product-GetSetItem","productDetail":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Product-Detail","getAvailability":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Product-GetAvailability","removeImg":"/on/demandware.static/Sites-Sandro-FR-Site/-/default/dwc8e53f09/images/interface/icon_remove.gif","searchsuggest":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Search-GetSuggestions","productNav":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Product-Productnav","summaryRefreshURL":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/COBilling-UpdateSummary","billingSelectCC":"https://fr.sandro-paris.com/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/COBilling-SelectCreditCard","updateAddressDetails":"https://fr.sandro-paris.com/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/COShipping-UpdateAddressDetails","updateAddressDetailsBilling":"https://fr.sandro-paris.com/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/COBilling-UpdateAddressDetails","shippingMethodsJSON":"https://fr.sandro-paris.com/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/COShipping-GetApplicableShippingMethodsJSON","shippingMethodsList":"https://fr.sandro-paris.com/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/COShipping-UpdateShippingMethodList","selectShippingMethodsList":"https://fr.sandro-paris.com/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/COShipping-SelectShippingMethod","shippingForm":"https://fr.sandro-paris.com/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/COShipping-ShippingForm","resetPaymentForms":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/COBilling-ResetPaymentForms","compareShow":"/fr/compare","compareAdd":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Compare-AddProduct","compareRemove":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Compare-RemoveProduct","compareEmptyImage":"/on/demandware.static/Sites-Sandro-FR-Site/-/default/dw4f8f8347/images/comparewidgetempty.png","giftCardCheckBalance":"https://fr.sandro-paris.com/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/COBilling-GetGiftCertificateBalance","addCoupon":"https://fr.sandro-paris.com/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Cart-AddCoupon","powerReviewsFullJs":"/on/demandware.static/-/Sites-sandro-catalog-front/fr_FR/v1525679157524/pwr/engine/js/full.js","powerReviewsZip":"/on/demandware.static/-/Sites-sandro-catalog-front/fr_FR/v1525679157524","registerProductAlert":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/ProductAlerts-Register","subscribeToNewsletter":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/SuscribeToNewsletter-Suscribe","getStores":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Stores-GetStores","getPickupStores":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Stores-GetPickupStores","getStaticResources":"https://fr.sandro-paris.com/on/demandware.static/Sites-Sandro-FR-Site/-/fr_FR/v1525679157524","refreshBasketAmounts":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Cart-RefreshBasketAmounts","certonaReco":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/Search-CertonaRecommendations","quickViewConfirm":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/LandingPages-quickViewConfirm","capAdresse":"/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/CapSaisieAjaxWebService","crosslog":"https://fr.sandro-paris.com/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/COShipping-CrossLogPointRelais","verifyAddress":"https://fr.sandro-paris.com/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/CapVerif-VerifyAddress"};
+app.clientcache = {"LISTING_INFINITE_SCROLL":false,"LISTING_REFINE_SORT":true};
+app.siteprefs = {FORMSPATTERNS  : {}};
+app.capverif = {"confirm_question":"Veuillez vérifier votre adresse","modify":"Modifier","valid":"Valider","modification_required":"Vous devez modifier votre adresse pour continuer.","keep":"Conserver","intro":"Pour un service de livraison optimisé votre adresse a été testée et semble être incorrecte telle quelle :","address_not_found":"L'adresse saisie n'a pas été retrouvée.","no_match":"Aucune correspondance n'a été trouvée","multiple_matches":"Veuillez modifier l'adresse saisie ou sélectionner une adresse dans la liste ci-dessous. Vous pouvez choisir de conserver votre adresse mais nous risquons de rencontrer des problèmes de livraison.","choices_intro":"choices_intro","modify_your_address":"- Modifier l'adresse saisie.","select_an_address":"- Sélectionner une adresse dans la liste ci-dessous.","entered_address":"Adresse saisie :","matches_gt_1":"correspondances ont été trouvées","matches_eq_1":"correspondance a été trouvée","error_streetnum_length":"Le numéro de voie ne peut dépasser 4 caractères","error_streetcomp_length":"Le numéro de voie plus le complément <br> ne peuvent dépasser 5 caractères","wrong_cp_or_loc":"Merci de saisir un couple Code Postal / Ville valide"};
+return app;
+}(window.app = window.app || {}));</script>
+ 
+
+
+  <script src="/on/demandware.static/Sites-Sandro-FR-Site/-/fr_FR/v1525679157524/optimized/main.min.js" type="text/javascript"></script>
+
+
+<script src="//s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4ea5d98601c1dc84&domready=1" type="text/javascript"></script>
+
+
+<script>app.page.setContext({"title":"Storefront","type":"storefront","ns":"storefront"});</script>
+<script>
+  var meta = "";
+  var keywords = "";
+</script>
+
+
+       <script src="/on/demandware.static/Sites-Sandro-FR-Site/-/fr_FR/v1525679157524/lib/jquery/swiper/idangerous.swiper.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+  Sandro.footer.bindEvents();
+  Sandro.cart.bindEvents();
+  Sandro.minicart.bindEvents();
+  Sandro.content.bindEvents();
+  Sandro.header.bindEvents();
+  Sandro.search.bindEvents();
+  Sandro.errorpages.bindEvents();
+  
+  $('.changeCountryContent a').on('click', function() {
+    var selectedCountry = $(this).text();; 
+    dataLayer.push({
+        'event': 'GAevent',
+        'eventCategory': 'ChangeCountry',
+        'eventAction': 'Clic',
+        'eventLabel': selectedCountry
+    });
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<input id="deactivateNlPopin" type="hidden" value="false" />
+
+<script src="/on/demandware.static/Sites-Sandro-FR-Site/-/fr_FR/v1525679157524/js/cookiesaccept.js"></script>
+ 
+  <div id="cookiesaccept" class="cookieBar">
+    <div class="content">
+      <a id="btn_cookiesOK" class="close" href=""></a>
+      <p>
+        En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies pour vous offrir un meilleur service.<br/>
+                Pour en savoir plus et paramétrer ces cookies: <a target="_blank" href="https://fr.sandro-paris.com/fr/conditions-generales-de-vente/terms.html#cookies">cliquez-ici</a>
+      </p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <script src="/on/demandware.static/Sites-Sandro-FR-Site/-/fr_FR/v1525679157524/js/capSaisieEngine.js"></script>
+  
+
+    <script src="/on/demandware.static/Sites-Sandro-FR-Site/-/fr_FR/v1525679157524/jwplayer/jwplayer.js" type="text/javascript"></script>
+<script type="text/javascript">jwplayer.key="Qh1wPcwUCJ3K1eihOYCwMYDRkhuzZ2m/IMatZdOHV/s=";</script>
+
+<script type="text/javascript">
+  $(function(){
+  //    add slider mobile 3 product  mobile
+    if($(window).width() < 768){
+      $(".swiper-multy-container").each(function() {
+        var mySwiper = $(this).swiper({
+          mode:'horizontal',
+          paginationClickable: true,
+          loop: true,
+          autoplay: 5000,
+          speed:600
+        });
+    
+         $(this).find(".swiper-multy-button-prev").on('click', function(e){
+          e.preventDefault()
+          mySwiper.swipePrev()
+        });
+         $(this).find(".swiper-multy-button-next").on('click', function(e){
+          e.preventDefault()
+          mySwiper.swipeNext()
+        });
+      });
+    };
+
+    if(window.useSlider) {
+    
+      var mySwiper = $('.swiper-container').swiper({
+        mode:'horizontal',
+        pagination: '.swypePagination',
+        paginationClickable: true,
+        autoplayDisableOnInteraction: false,
+        loop: true,
+        autoplay: 5000,
+        speed:600,
+        onInit: function(swiper){
+          $('.swiper-container').addClass('resizeSlide');
+          }
+      });
+      
+      var screenWidth = $(window).width();
+      var height = 0;
+      
+      if(screenWidth >= 1024){
+        var height = 585;
+      }
+      else if(screenWidth >= 768 && screenWidth <= 1023){
+        var height = 350;
+      }
+      else{
+        var height = 320;
+      }
+      
+        var width  = $(window).outerWidth( true );
+      $('.swiper-container, .swiper-slide').height(height);
+        $('.swiper-container, .swiper-slide').width(width);
+        if($('.swiper-container, .swiper-slide').height() !== null && $('.swiper-container, .swiper-slide').width() !== null && $(".swiper-container").length > 0){
+        mySwiper.reInit();
+        }
+
+        $('.linkHomePageImage').each( function() {
+          $(this).find('.swiper-slide').height('auto');
+          $(this).find('.swiper-slide').width('100%');
+        });
+      
+      if(Sandro.home.VimeoPlayer)
+      {
+        $(".iframe-video.withSplash").each(function() {
+          if($(this).length > 0){
+            if($(this).find(".cover").length == 0) {
+              var video_url = $(this).find("input#iframe").attr("data-url");
+              var autoplay = $(this).find("input#iframe").attr("data-autoplay");
+              var fullscreen = $(this).find("input#iframe").attr("data-fullscreen");
+              var iframe = '<div class="cover"><div class="player"><iframe src="' + video_url +
+                  '?rel=0&autoplay=' + 0 +
+                  '" width=vimeoHeight height=vimeoWidth frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div></div>';
+              var playerInDom = $(this).append(iframe);
+            } else {
+              $(this).on('click', 'img', function() {
+                $(this).parents(".iframe-video").find(".cover img").css("display", "none");
+                var video_url = $(this).parents(".iframe-video").find("input#iframe").attr("data-url");
+                var autoplay = $(this).parents(".iframe-video").find("input#iframe").attr("data-autoplay");
+                var fullscreen = $(this).parents(".iframe-video").find("input#iframe").attr("data-fullscreen");
+                
+                if(fullscreen == "true"){
+                  
+                  var iframeFS = '<div class="iframe-layer"></div><div class="iframe-fullscreen"><span class="close-video"></span><iframe src="' + video_url + '?rel=0&autoplay=' + 1 + '" width=vimeoHeight height=vimeoWidth frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>';
+                  var InDomFull = $('body').append(iframeFS);
+                  
+                  $(this).parents(".iframe-video").find(".cover img").css("display", "block");
+                  
+                  $('.iframe-layer, .iframe-fullscreen .close-video').click(function() {
+                    $('.iframe-fullscreen').remove();
+                    $('.iframe-layer').remove();
+                  });
+                  
+                } else{
+                  var iframe = '<div class="player"><iframe src="' + video_url + '?rel=0&autoplay=' +
+                      autoplay + '" width=vimeoHeight height=vimeoWidth frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>';
+                  var playerInDom = $(this).parents(".iframe-video").children('.cover').append(iframe);
+                }
+              });
+            }
+          }
+        });
+      }
+    }
+    
+    if($('.contentGuid').length > 0){
+      var  btGuid = '.btGuid';
+      var manGuid = '.manGuid';
+      var womanGuid = '.womanGuid';
+      var btWoman = '.btnWoman';
+      var btMan = '.btnMan';
+      $(btWoman).addClass('active');
+      
+      var cssHide = {
+          'z-index' : '2',
+          'position' :  'absolute',
+          'display' : 'none'
+      };
+      var cssShow = {
+          'z-index' : '3',
+          'position' :  'relative',
+          'display' : 'block'
+      };
+      
+      $('body').find(womanGuid).css(cssShow);
+      
+      $(btGuid).on('click', function(e){
+        e.preventDefault();
+        $(this).addClass('active');
+        $(this).siblings('a').removeClass('active');
+        if($(this).hasClass(btWoman.substring(1))){
+          $('body').find(manGuid).css(cssHide);
+          $('body').find(womanGuid).css(cssShow); 
+        }else{
+          $('body').find(manGuid).css(cssShow);
+          $('body').find(womanGuid).css(cssHide); 
+        }
+      });
+    }
+    
+    $('.videoHome').on('click', function(e){
+      e.preventDefault();
+      var urlVideo = $(this).attr('href');
+      createElementPopin = function(selectorBody){
+        var parentDiv = $(document.createElement('div')).addClass('zoomPopin');
+        var closeCurrent = $(document.createElement('div')).addClass('closeCurrent iconClose'); 
+        
+        // create element of Popin 
+        parentDiv
+        .css({
+          'height' :$(window).height()
+        })
+        .appendTo(selectorBody)
+        .append(closeCurrent);
+      };
+      
+      removeElementPopin = function(){
+        $('.zoomPopin').remove();
+      };
+      
+      closePopin = function(){
+        $('.closeCurrent').on('click tap touchstart', removeElementPopin);
+      };
+      
+      
+      vimeoEmbedLanding = function(urlVideo){
+        var idMyVideo = $(document.createElement('div')).attr('id', 'myVideo');
+        idMyVideo.appendTo('.zoomPopin');
+        
+        if($(window).width() < 767 && $('#myVideo').length > 0 ) { 
+              heightPlayer = 200;
+              widthPlayer = 320;
+            } else if($(window).width() > 767 && $(window).width() < 1920 && $('#myVideo').length > 0){
+              heightPlayer = 466;
+               widthPlayer = "69%";
+            }else if($(window).width() > 1920 && $('#myVideo').length > 0){
+              heightPlayer = 714;
+               widthPlayer = "69%";
+            }
+        
+        
+        jwplayer("myVideo").setup({
+              file: urlVideo,
+              width: widthPlayer,
+              height: heightPlayer
+          });
+        
+        setTimeout(function() { 
+            jwplayer("myVideo").pause();
+            jwplayer("myVideo").setMute(false);
+            jwplayer("myVideo").setControls(true);
+        },1000);
+      };
+      
+      createElementPopin('body');
+      closePopin();
+      vimeoEmbedLanding(urlVideo);
+      
+      var body1 = $("html, body");
+      body1.animate({scrollTop:0}, '500', 'swing'); 
+    
+    });
+    
+    resizeVideo = function(){
+        if($(window).width() < 767 && $('#myVideo').length > 0 ) { 
+          jwplayer().resize(320,200); 
+        } else if($(window).width() > 767 && $(window).width() < 1920 && $('#myVideo').length > 0){
+          jwplayer().resize("69%",466);
+        }else if($(window).width() > 1920 && $('#myVideo').length > 0){
+          jwplayer().resize("69%",714);
+        }
+    }
+
+    $(window).resize(function(){
+      if(!$('html').hasClass('ie8') && ($('#myVideo').length > 0)){
+        resizeVideo();
+      }
+    });
+    
+    $(window).scroll(function(){
+      $('.zoomPopin').css({
+        'height' : $('html').height()
+      })
+    });
+    
+    
+    if($('.blockHome').length) {
+      $('.blockHome img').on('click', function(e) {
+        var idProduct = $(this).data('idproduct');
+        var categ = $('#navigation li.show a.level-1').text();
+        dataLayer.push({
+            'event': 'GAevent',
+            'eventCategory': 'Sous-home | produit',
+            'eventAction': categ,
+            'eventLabel': idProduct
+        });
+      });
+      
+      $('.discoverCollection a').on('click', function() {
+        var categ = $('#navigation li.show a.level-1').text();
+        dataLayer.push({
+            'event': 'GAevent',
+            'eventCategory': 'Sous-home | collection',
+            'eventAction': categ,
+            'eventLabel': $(this).attr('href')
+        });
+      });
+      
+      $('.videoHome').on('click', function() {
+        var categ = $('#navigation li.show a.level-1').text();
+        dataLayer.push({
+            'event': 'GAevent',
+            'eventCategory': 'Sous-home | video',
+            'eventAction': categ,
+            'eventLabel': $(this).attr('href')
+        });
+      });
+      
+      $('.pt_preHome .home1 img').on('click', function(e) {
+        var imgLink = $(this).attr('src');
+        var categ = $('#navigation li.show a.level-1').text();
+        dataLayer.push({
+            'event': 'GAevent',
+            'eventCategory': 'Sous-home | collection',
+            'eventAction': categ,
+            'eventLabel': imgLink
+        });
+      });
+    }
+    var sliderInitDone = 0;
+    var loadPage = function () {
+      if (sliderInitDone == 0) {
+        if ($('.swiper-containerPdt').length){
+          // nombre de slides
+          var numberLayer = $('.layer_5_products .swiper-containerPdt .home-push').length;
+          // displaying arrow finction for callback event swiper
+          var arrowDisplay = function(mySwiperPdt) {
+            var lastSwiperChild = $( ".swiper-containerPdt .home-push" ).last(),
+              firstSwiperChild = $( ".swiper-containerPdt .home-push" ).first(),
+              sliderArrows = $(".arrow-right, .arrow-left"),
+              isMobileDevice = $(window).width() < 768;
+              
+            if (isMobileDevice || (!isMobileDevice && numberLayer > 5)) {
+              sliderArrows.removeClass("arrowNone");
+              if (lastSwiperChild.hasClass("swiper-slide-visible")) {
+                $(".layer_5_products .products .arrow-right").addClass("arrowNone");
+              } 
+
+              if (firstSwiperChild.hasClass("swiper-slide-visible")) {
+                $(".layer_5_products .products .arrow-left").addClass("arrowNone");
+              }
+            }
+          }
+          var mySwiperPdt = new Swiper('.swiper-containerPdt', {
+            mode:'horizontal',
+            slideClass: 'slidePdt',
+            slidesPerView : 1,
+            loop: false,
+            onSlideChangeStart: function(swiper) {
+              arrowDisplay(swiper);
+            },
+            onInit: function(swiper) {
+              arrowDisplay(swiper);
+            }
+          });
+          $('.layer_5_products .arrow-left').on('click', function(event){
+            event.preventDefault();
+            mySwiperPdt.swipePrev();
+          });
+          $('.layer_5_products .arrow-right').on('click', function(event){
+            event.preventDefault();
+            mySwiperPdt.swipeNext();
+          });
+          
+          $(window).on("resize", function () {
+            if ($(window).width() < 767){
+              mySwiperPdt.params.slidesPerView=1; 
+              mySwiperPdt.params.resistance =false;
+            }else{
+              mySwiperPdt.params.slidesPerView=5; 
+              mySwiperPdt.params.resistance ='100%';
+            }
+          }).resize();
+        }
+        sliderInitDone = 1;
+      }
+    }
+    
+    if(!$('.oldie').length) {
+      $('span[data-picture]').on("DOMSubtreeModified propertychange",function(){
+        var isPictureFillDone = true;
+        $('span[data-picture]').each(function() {
+          if($(this).find('img').length && $(this).find('img').completed)  isPictureFillDone = false;
+        });
+        
+        if(isPictureFillDone) {
+          var imgToLoad = $('span[data-picture] img').size() ;
+          var imgLoaded = 0;
+          var isEverythingLoaded = false;
+          var array = $('span[data-picture] img');
+          array.each(function(){
+              var img = new Image();
+              img.onload = function() {
+                  imgLoaded += 1;
+                  if(imgLoaded == imgToLoad) {
+                loadPage();
+              }
+              }
+              img.src = $(this).attr('src');
+          });
+        }
+        
+      });
+      loadPage();
+    }
+  }); 
+  
+</script>
+  </div><!--  /wrapper -->
+  
+<!-- Demandware Analytics code 1.0 (body_end-analytics-tracking-asynch.js) -->
+<script type="text/javascript">//<!--
+/* <![CDATA[ */
+function trackPage() {
+    try{
+        var trackingUrl = "https://fr.sandro-paris.com/on/demandware.store/Sites-Sandro-FR-Site/fr_FR/__Analytics-Start";
+        var dwAnalytics = dw.__dwAnalytics.getTracker(trackingUrl);
+        if (typeof dw.ac == "undefined") {
+            dwAnalytics.trackPageView();
+        } else {
+            dw.ac.setDWAnalytics(dwAnalytics);
+        }
+    }catch(err) {};
+}
+/* ]]> */
+// -->
+</script>
+<script type="text/javascript" src="/on/demandware.static/Sites-Sandro-FR-Site/-/fr_FR/v1525679157524/internal/jscript/dwanalytics-18.3.js" async="async" onload="trackPage()"></script>
+<!-- Demandware Active Data (body_end-active_data.js) -->
+<script src="/on/demandware.static/Sites-Sandro-FR-Site/-/fr_FR/v1525679157524/internal/jscript/dwac-16.9.js" type="text/javascript" async="async"></script><!-- CQuotient Activity Tracking (body_end-cquotient.js) -->
+<script src="https://cdn.cquotient.com/js/v2/gretel.min.js" type="text/javascript" async="async"></script>
+</body>
